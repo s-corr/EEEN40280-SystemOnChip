@@ -3,7 +3,7 @@
 
 #include "DES_M0_SoC.h"
 
-void spiCS(int value);
-uint8 spiWrite(uint8 byte);
+void SPIselect(int value);
+uint8 SPIbyte(uint8 byte);
 
 #endif

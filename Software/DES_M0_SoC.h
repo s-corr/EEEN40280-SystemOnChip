@@ -20,6 +20,7 @@ typedef   signed       int   int32;
 #define SPI_DATA   (*((volatile uint8  *)(SPI_BASE + 0x00)))
 #define SPI_CSn    (*((volatile uint8  *)(SPI_BASE + 0x04)))
 #define SPI_STATUS (*((volatile uint8  *)(SPI_BASE + 0x08)))
+#define SPI_CTRL   (*((volatile uint8  *)(SPI_BASE + 0x0C)))
 
 #pragma anon_unions
 
