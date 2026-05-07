@@ -1,8 +1,5 @@
 `timescale 1ns / 1ns
 ////////////////////////////////////////////////////////////////////////////////
-// Company: UCD School of Electrical and Electronic Engineering
-// Engineer: Brian Mulkeen
-// 
 // Create Date:   April 2026
 // Design Name: 	Cortex-M0 DesignStart system
 // Module Name:   AHBspi
