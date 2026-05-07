@@ -15,6 +15,8 @@
 
 #include <stdio.h>					// needed for printf
 #include "DES_M0_SoC.h"			// defines registers in the hardware blocks used
+#include "accel.h"
+#include "display.h"
 
 #define BUF_SIZE						100				// size of the array to hold received characters
 #define ASCII_CR						'\r'			// character to mark the end of input
@@ -81,6 +83,7 @@ void delay (uint32 n)
 //////////////////////////////////////////////////////////////////
 int main(void) 
 {
+	uint16 accelDataPacket;
 	uint8 i;		// used in for loop
 	uint8 TxBuf[ARRAY_SIZE(RxBuf)];		// serial transmit buffer
 
@@ -96,61 +99,34 @@ int main(void)
 	
 	printf("\n\nWelcome to Cortex-M0 SoC\n");		// print a welcome message
 	printf("\n\nModified Version - Sam and Sean\n\n"); // Print the addition to the welcome message
+	
+	// INIT SPI
+	SPIinit(void);
+	
+	// INIT ACCEL
+	setupAccel(void);
+
 
 // ========================  Working Loop ==========================================
 	
 	while(1)		// loop forever
 	{	
-		// Do some processing before entering Sleep Mode
-		GPIO_LED	= GPIO_SW; 			// copy 16 switches onto corresponding LEDs
-		delay(FLASH_DELAY);				// short delay
-		INVERT_LEDS;							// invert the 8 rightmost LEDs
-		delay(FLASH_DELAY);				// short delay
-		INVERT_LEDS;							// invert the same LEDs again
-		delay(FLASH_DELAY);				// short delay
-		
-		printf("\nCurrent Switch State: %d", (int)GPIO_SW);
-
-		// Ask for user input
-		printf("\nType some characters: ");
-		
-		while (BufReady == 0)	// loop until input is ready to process
-		{
-			__wfi();  // Wait For Interrupt: enter Sleep Mode - wake on character received
-			// only get to this point if a character has been received
-			GPIO_LED = RxBuf[counter-1];  // display the code for the character
-		}
-
-		/* Get here when CR is entered or the buffer is full - data is ready for processing.
-			Copy the data with UART interrupts disabled, so data does not change.  
-			The interrupts should only be disabled for a short time, to avoid missing data,
-		  so the program only does the minimum necessary in the "critical section". */
-		
+		// TODO: SEE WHAT CAN GO
 		// ---- Start of critical section ----
-		NVIC_Disable = (1 << NVIC_UART_BIT_POS);	// disable the UART interrupt
-
-		// Copy the received characters to another array, changing the case of letters
-		for (i=0; i<=counter; i++)		// step through all the bytes received
-		{
-			if (RxBuf[i] >= 'A') {						// if this character is a letter (roughly)
-				TxBuf[i] = RxBuf[i] ^ CASE_BIT; // copy to transmit buffer, changing case
-			}
-			else {
-				TxBuf[i] = RxBuf[i];            // not a letter so do not change case
-			}
-		} 
-		
-		printf("\nSize of recieved string: %d\n\n", counter);
+		// NVIC_Disable = (1 << NVIC_UART_BIT_POS);	// disable the UART interrupt
 
 		// Reset the counter and the flag, ready for the next time
-		counter  = 0; 		// reset the counter	
-		BufReady = 0;			// clear the flag
+		// counter  = 0; 		// reset the counter	
+		// BufReady = 0;			// clear the flag
 		
-		NVIC_Enable = (1 << NVIC_UART_BIT_POS);		// Enable the UART interrupt
+		// NVIC_Enable = (1 << NVIC_UART_BIT_POS);		// Enable the UART interrupt
 		// ---- End of critical section ----	
+		accelDataPacket = accelRead(0x0E); // Lets just read the acceleration going left for now
+		
+		printf("\nPACKET RECV : %d\n", (int)accelDataPacket);
 
-		// Print the result.  Printing can take a long time, so this is outside the critical section.
-		printf("\n:--> |%s|\n", TxBuf);  // print the results between bars
+		dispalyAccel(accelDataPacket);
+		delay(FLASH_DELAY);
 
 	} // end of infinite loop
 

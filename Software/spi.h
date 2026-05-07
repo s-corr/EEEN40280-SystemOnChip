@@ -5,5 +5,5 @@
 
 void SPIselect(int value);
 uint8 SPIbyte(uint8 byte);
-
+void SPIinit(void);
 #endif
