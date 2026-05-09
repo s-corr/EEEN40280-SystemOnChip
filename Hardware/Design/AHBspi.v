@@ -53,6 +53,103 @@
 //  software to wiretap their conversation and get slave data 
 //
 //
+// 
+//
+//   ================
+//   Example Software Code Usage (written in Sam-code, who knows if it will work)
+//   ==============================
+//
+//   // Before we begin, if you havent read the module. how it basically works
+//   //   is it first this module makes a slower clock (sclk) from the main clock (clk).
+//   //
+//   // To transmit to the slave, cs_sel is used to select a slave,
+//   //   the masters 8-bit Tx message is placed in shiftReg (also 8-bit), 
+//   //   once ready set up and ready to send tx_begin is set low then high.
+//   //
+//   // During a transmission, is_spi_busy register is set high.
+//   //   MOSI (masters message) is assigned to always be shiftReg's bit 7
+//   //   shiftReg[7], the slave then reads this each sclk.
+//   //   On each risng edge, the slave response (MISO) is shifted into bit 0
+//   //   of shiftReg, eliminating the 7th bit. Once the 8-bits have been recived from
+//   //   slave they are placed in dataRx, is_spi_busy is set low again and
+//   /    SPI idles.
+//   //  
+//   //   Because of how mosi and miso are on opisit ends of shiftReg, the
+//   //   response from thr slave will always be 8 clock cycles (or one tx session)
+//   //   behind. - I am ashamed to addmit this took me longer to realise than
+//   //   i am willing to addmit. 
+//   //
+//   //   Like for example you want to read a register:
+//   //   Step 1.)  Master sends the read command 0x0B, Slave send shite.
+//   //   Step 2.)  Master sends the address to read, Slave send shit.
+//   //   --- Because slave is behind by 8 cycles Master needs to send shite ---
+//   //   Step 3.)  Master sends shite, Slave send 8-bits from register.
+//
+//
+//
+//   === Setup ====
+//    uint16 x_accel; // accelerometer X-axis data
+//
+//   clkDelay = 4'b1001; // SCLK = 50MHz / (9+1) = 5MHz 
+//   cs_sel = 1'b0; // no slave selected 
+//
+//   === Read accelerometer register ===
+//   cs_sel = 2'b01; // select accelerometer
+//
+//   // Send command 
+//   dataTx = 0x0B; // Send the accelerometer read register command
+//   tx_begin = 1'b0; // To meet a requird tx condition always set tx_begin low frst
+//   tx_begin = 1'b1; // Set high to begin transmission
+//   while(is_spi_busy); // wait for her to get off the phone
+//   // Slave will send shit so wont bother saving
+//   
+//   // Send adress
+//   dataTx = 0x0E; // Send XDATA_L register adress
+//   tx_begin = 1'b0; // To meet a requird tx condition always set tx_begin low frst
+//   tx_begin = 1'b1; // Set high to begin transmission
+//   while(is_spi_busy); // wait for her to get off the phone
+//   // Slave will send more shit 
+//
+//   // Read XDATA_L (Master's turn to send waffle)
+//   dataTx = 0x00; // shite
+//   tx_begin = 1'b0; // To meet a requird tx condition always set tx_begin low frst
+//   tx_begin = 1'b1; // Set high to begin transmission
+//   while(is_spi_busy);
+//   x_accel = dataRx; // low byte 
+//  
+//   // If i read the data sheet right, which is probubly isn't Likely,
+//   //   i think you can send junk again and it sends the High byte for the data after the Low
+//   
+//   // Read XDATA_H 
+//   dataTx = 0x00; // shite
+//   tx_begin = 1'b0; // To meet a requird tx condition always set tx_begin low frst
+//   tx_begin = 1'b1; // Set high to begin transmission
+//   while(is_spi_busy);
+//   x_accel |= (dataRx << 8); // H and L combined, results in 16-bit (or half-word i belive is how they say it) with 12 bits i care about
+//    
+//    // And now we have the 12-bit x-axis data on the software side (once we
+//    //  figure out the spi master module registers hardware adresses OFC)
+//    //
+//    // The plan then i gues would be to feed that data into some 7-segment
+//    //    converter lookup table thing and use SPI to tx it ot the display
+//    // 
+//    // I have yet to refresh myself on the 7-segments, but im sure its
+//    //   standardised... it's spi ofc :)
+//
+//
+//
+//
+//
+//   // Why do you have to do tx_begin low high thing I hear you complaining? well... 
+//
+//   //  ``The following condition had to be added for unexcapeable 
+//   //    infinite loop reasons.
+//   //    To begin Tx, the following must be true:        //
+//   //    tx_starter = (tx_begin == 1'b1 && tx_begin_prev == 1'b0)  //
+//   //              [tx_starter starts the transmission]           //
+//   //    [Every positve clock edge this is done: tx_begin_prev <= tx_begin;]
+//   
+//    
 //      
 //
 //
@@ -75,7 +172,7 @@ module AHBspi(
 	  
     // ========== Software Control ==========
     // To control the SPI master module software will be used to control registers
-    reg [4:0] clkDelay; // sclk = 50MHZ/(clkDelay + 1) 
+    reg [3:0] clkDelay; // sclk = 50MHZ/(clkDelay + 1) 
     reg [7:0] dataTx; // byte to transmit
     reg tx_begin; // put high when want to start tx
     reg [1:0] cs_sel; // 2'b00 = no selection, 2'b01 = accelerometer, 2'b10 = display 
@@ -86,7 +183,7 @@ module AHBspi(
     reg [7:0] dataRx = 8'b0; // byte that was recived
 
     // === Other registers === 
-    reg [4:0] countClk = 5'b0; // counts the clock edges
+    reg [3:0] countClk = 4'b0; // counts the clock edges
     //reg [4:0] delayEdges; // Number of edge to delay clk by. Set on register vale software sider (Rember value starts at 0)
     reg [7:0] shiftReg = 8'b0;
     reg [3:0] countBit = 4'b0; // keeps track of current bit
@@ -115,7 +212,7 @@ module AHBspi(
     begin 
       if (countClk == clkDelay)
       begin
-        countClk <= 1'b0;
+        countClk <= 5'b0;
         sclkVal <= ~sclkVal;
       end
       else 
@@ -136,7 +233,7 @@ module AHBspi(
     assign cs_bar_accel = ~(cs_sel == 2'b01 && (currentState == TX || currentState == TX_COMPLETE));
     assign cs_bar_disp = ~(cs_sel == 2'b10 && (currentState == TX || currentState == TX_COMPLETE));
 
-    // ======= fix to fo software control ===
+    // ======= tx_begin fix for software control ====
     // needed to prevent software control failing to end tx on time causing infinit loop
     always @ (posedge clk) tx_begin_prev <= tx_begin;
      // tx_starter will only allow another transmission if tx_begin has been
@@ -145,7 +242,7 @@ module AHBspi(
     
 
 
-    // === MOSi ====
+    // === MOSI ====
     assign mosi = shiftReg[7];
 
     // ==== Main SPI State Machine ====
