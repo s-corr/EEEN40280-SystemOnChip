@@ -2,24 +2,23 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Mon Mar 25 15:19:43 2024
-# Process ID: 3064
-# Log file: C:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.runs/blk_mem_8Kword_synth_1/blk_mem_8Kword.vds
-# Journal file: C:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.runs/blk_mem_8Kword_synth_1\vivado.jou
+# Start of session at: Sat May  9 23:58:44 2026
+# Process ID: 929844
+# Log file: /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/blk_mem_8Kword_synth_1/blk_mem_8Kword.vds
+# Journal file: /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/blk_mem_8Kword_synth_1/vivado.jou
 #-----------------------------------------------------------
 source blk_mem_8Kword.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/dGnome/Applications/Vivado_2015p2/Vivado/2015.2/data/ip'.
 Command: synth_design -top blk_mem_8Kword -part xc7a100tcsg324-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
-INFO: [Common 17-1223] The version limit for your license is '2021.10' and will expire in -876 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 250.707 ; gain = 70.105
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 890.238 ; gain = 145.527 ; free physical = 580 ; free virtual = 5270
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'blk_mem_8Kword' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/synth/blk_mem_8Kword.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_8Kword' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/synth/blk_mem_8Kword.vhd:73]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -92,8 +91,8 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_8Kword' [c:/Users/bmulkeen/Proj
 	Parameter C_COUNT_36K_BRAM bound to: 8 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     38.253 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_2' declared at 'c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:123' bound to instance 'U0' of component 'blk_mem_gen_v8_2' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/synth/blk_mem_8Kword.vhd:233]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:264]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_2' declared at '/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:123' bound to instance 'U0' of component 'blk_mem_gen_v8_2' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/synth/blk_mem_8Kword.vhd:233]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:264]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -166,7 +165,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [c:/Users/bmulkeen/Pr
 	Parameter C_COUNT_36K_BRAM bound to: 8 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     38.253 mW - type: string 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -234,7 +233,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth' [c:/Users/bmulk
 	Parameter C_COMMON_CLK bound to: 0 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
@@ -304,7 +303,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [c:/Users/bmulkeen/Pro
 	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_MEM_TYPE bound to: 1 - type: integer 
 	Parameter C_HAS_RSTA bound to: 0 - type: integer 
@@ -341,8 +340,8 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [c:/Users/bmulkeen
 	Parameter C_USE_ECC bound to: 0 - type: integer 
 	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
 	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_input_block' (1#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_input_block' (1#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
@@ -415,11 +414,11 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [c:/Users/bmu
 	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
 	Parameter C_SIM_COLLISION_CHECK bound to: NONE - type: string 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'bindec' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:5118]
+INFO: [Synth 8-638] synthesizing module 'bindec' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:5118]
 	Parameter C_NUM_PRIM_DEPTH bound to: 2 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'bindec' (2#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:5118]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-256] done synthesizing module 'bindec' (2#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:5118]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
@@ -476,9 +475,9 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [c:/Users/bmulk
 	Parameter C_MEM_ADDR_WIDTH_A bound to: 13 - type: integer 
 	Parameter C_MEM_ADDR_WIDTH_B bound to: 13 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
@@ -708,10 +707,10 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init' [c:/User
 	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter WRITE_WIDTH_A bound to: 4 - type: integer 
 	Parameter WRITE_WIDTH_B bound to: 4 - type: integer 
-INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init' (3#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized0' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init' (3#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized0' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
@@ -768,9 +767,9 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized0'
 	Parameter C_MEM_ADDR_WIDTH_A bound to: 13 - type: integer 
 	Parameter C_MEM_ADDR_WIDTH_B bound to: 13 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized0' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized0' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
@@ -1000,10 +999,10 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__paramete
 	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter WRITE_WIDTH_A bound to: 4 - type: integer 
 	Parameter WRITE_WIDTH_B bound to: 4 - type: integer 
-INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized0' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width__parameterized0' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized1' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized0' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width__parameterized0' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized1' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
@@ -1060,9 +1059,9 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized1'
 	Parameter C_MEM_ADDR_WIDTH_A bound to: 13 - type: integer 
 	Parameter C_MEM_ADDR_WIDTH_B bound to: 13 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized1' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized1' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
@@ -1292,10 +1291,10 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__paramete
 	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter WRITE_WIDTH_A bound to: 4 - type: integer 
 	Parameter WRITE_WIDTH_B bound to: 4 - type: integer 
-INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized1' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width__parameterized1' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized2' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized1' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width__parameterized1' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized2' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
@@ -1352,9 +1351,9 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized2'
 	Parameter C_MEM_ADDR_WIDTH_A bound to: 13 - type: integer 
 	Parameter C_MEM_ADDR_WIDTH_B bound to: 13 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized2' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized2' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
@@ -1584,10 +1583,10 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__paramete
 	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter WRITE_WIDTH_A bound to: 4 - type: integer 
 	Parameter WRITE_WIDTH_B bound to: 4 - type: integer 
-INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized2' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width__parameterized2' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized3' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized2' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width__parameterized2' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized3' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
@@ -1644,9 +1643,9 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized3'
 	Parameter C_MEM_ADDR_WIDTH_A bound to: 13 - type: integer 
 	Parameter C_MEM_ADDR_WIDTH_B bound to: 13 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized3' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized3' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
@@ -1876,10 +1875,10 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__paramete
 	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter WRITE_WIDTH_A bound to: 4 - type: integer 
 	Parameter WRITE_WIDTH_B bound to: 4 - type: integer 
-INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized3' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width__parameterized3' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized4' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized3' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width__parameterized3' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized4' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
@@ -1936,9 +1935,9 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized4'
 	Parameter C_MEM_ADDR_WIDTH_A bound to: 13 - type: integer 
 	Parameter C_MEM_ADDR_WIDTH_B bound to: 13 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized4' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized4' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
@@ -2168,10 +2167,10 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__paramete
 	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter WRITE_WIDTH_A bound to: 4 - type: integer 
 	Parameter WRITE_WIDTH_B bound to: 4 - type: integer 
-INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized4' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width__parameterized4' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized5' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized4' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width__parameterized4' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized5' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
@@ -2228,9 +2227,9 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized5'
 	Parameter C_MEM_ADDR_WIDTH_A bound to: 13 - type: integer 
 	Parameter C_MEM_ADDR_WIDTH_B bound to: 13 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized5' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized5' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
@@ -2460,10 +2459,10 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__paramete
 	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter WRITE_WIDTH_A bound to: 4 - type: integer 
 	Parameter WRITE_WIDTH_B bound to: 4 - type: integer 
-INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized5' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width__parameterized5' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized6' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized5' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width__parameterized5' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized6' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
@@ -2520,9 +2519,9 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width__parameterized6'
 	Parameter C_MEM_ADDR_WIDTH_A bound to: 13 - type: integer 
 	Parameter C_MEM_ADDR_WIDTH_B bound to: 13 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized6' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183487]
+INFO: [Synth 8-3919] null assignment ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183488]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized6' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
@@ -2752,10 +2751,10 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init__paramete
 	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter WRITE_WIDTH_A bound to: 4 - type: integer 
 	Parameter WRITE_WIDTH_B bound to: 4 - type: integer 
-INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized6' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width__parameterized6' (4#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_mux' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:5381]
+INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:104593]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init__parameterized6' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width__parameterized6' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_mux' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:5381]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_RST_TYPE bound to: sync - type: string 
@@ -2778,8 +2777,8 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_mux' [c:/Users/bmulkeen/Pro
 	Parameter C_EN_ECC_READ bound to: 0 - type: bool 
 	Parameter C_EN_ECC_WRITE bound to: 0 - type: bool 
 	Parameter C_EN_ECC_PIPE bound to: 0 - type: bool 
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_mux' (5#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:5381]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_mux__parameterized0' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:5381]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_mux' (5#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:5381]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_mux__parameterized0' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:5381]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_RST_TYPE bound to: sync - type: string 
@@ -2802,9 +2801,9 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_mux__parameterized0' [c:/Us
 	Parameter C_EN_ECC_READ bound to: 0 - type: bool 
 	Parameter C_EN_ECC_WRITE bound to: 0 - type: bool 
 	Parameter C_EN_ECC_PIPE bound to: 0 - type: bool 
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_mux__parameterized0' (5#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:5381]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_generic_cstr' (6#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_mux__parameterized0' (5#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:5381]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_generic_cstr' (6#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
 	Parameter C_MEM_TYPE bound to: 1 - type: integer 
 	Parameter C_WRITE_WIDTH_A bound to: 32 - type: integer 
 	Parameter C_READ_WIDTH_A bound to: 32 - type: integer 
@@ -2815,13 +2814,13 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [c:/Users/bmulkee
 	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
 	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
 	Parameter C_USE_ECC bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_output_block' (7#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_top' (8#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2_synth' (9#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2' (10#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:264]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_8Kword' (11#1) [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/synth/blk_mem_8Kword.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_output_block' (7#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_top' (8#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2_synth' (9#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2' (10#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:264]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_8Kword' (11#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/synth/blk_mem_8Kword.vhd:73]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 447.223 ; gain = 266.621
+Finished RTL Elaboration : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1087.191 ; gain = 342.480 ; free physical = 419 ; free virtual = 5112
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2831,41 +2830,41 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 447.223 ; gain = 266.621
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1087.191 ; gain = 342.480 ; free physical = 419 ; free virtual = 5112
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_8Kword_ooc.xdc]
-Finished Parsing XDC File [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_8Kword_ooc.xdc]
+Parsing XDC File [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_8Kword_ooc.xdc]
+Finished Parsing XDC File [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_8Kword_ooc.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 569.305 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1250.207 ; gain = 0.000 ; free physical = 390 ; free virtual = 5083
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:00 ; elapsed = 00:01:04 . Memory (MB): peak = 569.305 ; gain = 388.703
+Finished Constraint Validation : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 382 ; free virtual = 5074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:00 ; elapsed = 00:01:04 . Memory (MB): peak = 569.305 ; gain = 388.703
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 382 ; free virtual = 5074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:04 . Memory (MB): peak = 569.305 ; gain = 388.703
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 382 ; free virtual = 5074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:00 ; elapsed = 00:01:05 . Memory (MB): peak = 569.305 ; gain = 388.703
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 382 ; free virtual = 5074
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2917,14 +2916,14 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 569.305 ; gain = 388.703
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 381 ; free virtual = 5074
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 569.305 ; gain = 388.703
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 374 ; free virtual = 5066
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 569.305 ; gain = 388.703
+Finished Parallel Reinference  : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 374 ; free virtual = 5066
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -2935,16 +2934,16 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 569.305 ; gain = 388.703
+Finished Area Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 366 ; free virtual = 5058
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 569.305 ; gain = 388.703
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 366 ; free virtual = 5058
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 569.305 ; gain = 388.703
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 366 ; free virtual = 5058
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -2952,10 +2951,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:13 . Memory (MB): peak = 572.918 ; gain = 392.316
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 313 ; free virtual = 5014
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:13 . Memory (MB): peak = 573.891 ; gain = 393.289
+Finished Timing Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 313 ; free virtual = 5014
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2967,7 +2966,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:09 ; elapsed = 00:01:13 . Memory (MB): peak = 583.488 ; gain = 402.887
+Finished Technology Mapping : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 305 ; free virtual = 5006
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2985,7 +2984,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 583.488 ; gain = 402.887
+Finished IO Insertion : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 305 ; free virtual = 5006
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2998,7 +2997,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 583.488 ; gain = 402.887
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 305 ; free virtual = 5006
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3010,13 +3009,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 583.488 ; gain = 402.887
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 305 ; free virtual = 5006
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 583.488 ; gain = 402.887
+Start Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 305 ; free virtual = 5006
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 583.488 ; gain = 402.887
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 305 ; free virtual = 5006
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3069,25 +3068,25 @@ Report Instance Areas:
 |21    |            \prim_init.ram            |blk_mem_gen_prim_wrapper_init__parameterized6 |     1|
 +------+--------------------------------------+----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 583.488 ; gain = 402.887
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 297 ; free virtual = 4998
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:01:07 . Memory (MB): peak = 583.488 ; gain = 258.797
-Synthesis Optimization Complete : Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 583.488 ; gain = 402.887
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:13 ; elapsed = 00:01:13 . Memory (MB): peak = 1250.207 ; gain = 219.953 ; free physical = 296 ; free virtual = 4998
+Synthesis Optimization Complete : Time (s): cpu = 00:01:20 ; elapsed = 00:01:20 . Memory (MB): peak = 1250.207 ; gain = 505.496 ; free physical = 296 ; free virtual = 4998
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_8Kword_ooc.xdc]
-Finished Parsing XDC File [c:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_8Kword_ooc.xdc]
+Parsing XDC File [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_8Kword_ooc.xdc]
+Finished Parsing XDC File [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_8Kword_ooc.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-94 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+93 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 583.488 ; gain = 380.879
+synth_design: Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 1250.207 ; gain = 396.996 ; free physical = 296 ; free virtual = 4998
 INFO: [Coretcl 2-1174] Renamed 20 cell refs.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 583.488 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 25 15:20:59 2024...
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1282.234 ; gain = 0.000 ; free physical = 296 ; free virtual = 4998
+INFO: [Common 17-206] Exiting Vivado at Sun May 10 00:00:11 2026...

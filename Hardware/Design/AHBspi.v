@@ -230,6 +230,7 @@ module AHBspi(
 
 
     // ======= Chip select ========
+    // TODO: Decide: This is to ignore when in IDLE but this might be bad practice, im notsure?
     assign cs_bar_accel = ~(cs_sel == 2'b01 && (currentState == TX || currentState == TX_COMPLETE));
     assign cs_bar_disp = ~(cs_sel == 2'b10 && (currentState == TX || currentState == TX_COMPLETE));
 

@@ -14,16 +14,15 @@ Command: synth_design -top CORTEXM0DS -part xc7a100tcsg324-1 -mode out_of_contex
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
-INFO: [Common 17-1223] The version limit for your license is '2015.09' and will expire in -26 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 247.688 ; gain = 69.848
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 893.242 ; gain = 148.527 ; free physical = 434 ; free virtual = 5213
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'CORTEXM0DS' [C:/Users/lab/Documents/DES_SoC/Hardware/Source/CORTEXM0DS.v:28]
-INFO: [Synth 8-638] synthesizing module 'cortexm0ds_logic' [C:/Users/lab/Documents/DES_SoC/Hardware/Source/cortexm0ds_logic.v:28]
-INFO: [Synth 8-256] done synthesizing module 'cortexm0ds_logic' (1#1) [C:/Users/lab/Documents/DES_SoC/Hardware/Source/cortexm0ds_logic.v:28]
-INFO: [Synth 8-256] done synthesizing module 'CORTEXM0DS' (2#1) [C:/Users/lab/Documents/DES_SoC/Hardware/Source/CORTEXM0DS.v:28]
+INFO: [Synth 8-638] synthesizing module 'CORTEXM0DS' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/CORTEXM0DS/imports/Source/CORTEXM0DS.v:28]
+INFO: [Synth 8-638] synthesizing module 'cortexm0ds_logic' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/CORTEXM0DS/imports/Source/cortexm0ds_logic.v:28]
+INFO: [Synth 8-256] done synthesizing module 'cortexm0ds_logic' (1#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/CORTEXM0DS/imports/Source/cortexm0ds_logic.v:28]
+INFO: [Synth 8-256] done synthesizing module 'CORTEXM0DS' (2#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/CORTEXM0DS/imports/Source/CORTEXM0DS.v:28]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 450.168 ; gain = 272.328
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1089.234 ; gain = 344.520 ; free physical = 241 ; free virtual = 5044
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -33,39 +32,39 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 450.168 ; gain = 272.328
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1089.234 ; gain = 344.520 ; free physical = 216 ; free virtual = 5018
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/lab/Documents/DES_SoC/Hardware/DES_M0_SoC.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc]
-Finished Parsing XDC File [C:/Users/lab/Documents/DES_SoC/Hardware/DES_M0_SoC.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc]
+Parsing XDC File [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc]
+Finished Parsing XDC File [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 706.238 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1382.258 ; gain = 1.000 ; free physical = 145 ; free virtual = 4905
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 706.238 ; gain = 528.398
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1382.258 ; gain = 637.543 ; free physical = 207 ; free virtual = 4920
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 706.238 ; gain = 528.398
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1382.258 ; gain = 637.543 ; free physical = 203 ; free virtual = 4917
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 706.238 ; gain = 528.398
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1382.258 ; gain = 637.543 ; free physical = 203 ; free virtual = 4917
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 706.238 ; gain = 528.398
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1382.258 ; gain = 637.543 ; free physical = 320 ; free virtual = 5007
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -122,14 +121,14 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 706.238 ; gain = 528.398
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1382.258 ; gain = 637.543 ; free physical = 320 ; free virtual = 5007
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 706.238 ; gain = 528.398
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1382.258 ; gain = 637.543 ; free physical = 309 ; free virtual = 4999
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 706.238 ; gain = 528.398
+Finished Parallel Reinference  : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1382.258 ; gain = 637.543 ; free physical = 309 ; free virtual = 4999
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -140,16 +139,16 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 706.238 ; gain = 528.398
+Finished Area Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1382.258 ; gain = 637.543 ; free physical = 260 ; free virtual = 4952
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 706.238 ; gain = 528.398
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1382.258 ; gain = 637.543 ; free physical = 260 ; free virtual = 4952
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 706.238 ; gain = 528.398
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1382.258 ; gain = 637.543 ; free physical = 260 ; free virtual = 4952
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -157,10 +156,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:50 . Memory (MB): peak = 706.238 ; gain = 528.398
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 1382.258 ; gain = 637.543 ; free physical = 261 ; free virtual = 4958
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 706.238 ; gain = 528.398
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 1382.258 ; gain = 637.543 ; free physical = 257 ; free virtual = 4954
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -172,7 +171,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 791.777 ; gain = 613.938
+Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 1456.391 ; gain = 711.676 ; free physical = 147 ; free virtual = 4793
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -190,7 +189,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 793.863 ; gain = 616.023
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1456.391 ; gain = 711.676 ; free physical = 146 ; free virtual = 4792
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -203,7 +202,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 793.863 ; gain = 616.023
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1456.391 ; gain = 711.676 ; free physical = 146 ; free virtual = 4792
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -215,13 +214,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 793.863 ; gain = 616.023
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1456.391 ; gain = 711.676 ; free physical = 146 ; free virtual = 4792
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 793.863 ; gain = 616.023
+Start Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1456.391 ; gain = 711.676 ; free physical = 146 ; free virtual = 4792
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 793.863 ; gain = 616.023
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1456.391 ; gain = 711.676 ; free physical = 146 ; free virtual = 4792
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -257,25 +256,25 @@ Report Instance Areas:
 |2     |  u_logic |cortexm0ds_logic |  4386|
 +------+----------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 793.863 ; gain = 616.023
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1456.391 ; gain = 711.676 ; free physical = 146 ; free virtual = 4792
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:56 . Memory (MB): peak = 793.863 ; gain = 345.566
-Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 793.863 ; gain = 616.023
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1456.391 ; gain = 296.125 ; free physical = 146 ; free virtual = 4792
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1456.391 ; gain = 711.676 ; free physical = 146 ; free virtual = 4792
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 40 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'CORTEXM0DS' is not ideal for floorplanning, since the cellview 'cortexm0ds_logic' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [C:/Users/lab/Documents/DES_SoC/Hardware/DES_M0_SoC.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc]
-Finished Parsing XDC File [C:/Users/lab/Documents/DES_SoC/Hardware/DES_M0_SoC.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc]
+Parsing XDC File [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc]
+Finished Parsing XDC File [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-16 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+15 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 793.863 ; gain = 603.801
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 793.863 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 26 15:17:57 2015...
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 1488.398 ; gain = 635.184 ; free physical = 143 ; free virtual = 4798
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1552.414 ; gain = 0.000 ; free physical = 151 ; free virtual = 4782
+INFO: [Common 17-206] Exiting Vivado at Sat May  9 23:57:20 2026...

@@ -95,7 +95,9 @@ module AHBliteTop (
     wire [11:0] led_rom;        // status output from ROM loader
     wire [15:0] led_gpio;       // led output from GPIO block
     assign led = ROMload ? {4'b0,led_rom} : led_gpio;    // choose which to display
-    
+   
+
+//TODO: Connect these SPI wires 
 // Temporary connections to the accelerometer signals, to avoid warnings in synthesis
 // ## If you use the accelerometer, you will need to delete these assignments
     // assign aclSCK = 1'b0;   // accelerometer SPI clock is always low
@@ -148,6 +150,7 @@ module AHBliteTop (
 // Connect the interrupt signal from the slave to the appropriate bit of IRQ
 // Leave any unused interrupt inputs wired to 0 (inactive)
     assign IRQ = {14'b0,IRQ_uart,1'b0};     // no interrupts in use yet, so all signals 0
+    //TODO: might want a SPI interups ==> assign IRQ = {13'b0,IRQ_spi,IRQ_uart,1'b0};
 
 // Instantiate Cortex-M0 DesignStart processor and connect signals 
     CORTEXM0DS cpu (
@@ -179,7 +182,8 @@ module AHBliteTop (
 
 // ======================== Address Decoder ======================================
 // Implements address map, generates slave select signals and controls mux
-// ## As you add more slaves, you need to use more of the slave select signals   
+// ## As you add more slaves, you need to use more of the slave select signals
+// TODO: NEED to add SPI to decoder ==> HSEL_spi (it's on the 4th)
     AHBDCD decode (
         .HADDR      (HADDR),        // address in
         .HSEL_S0    (HSEL_rom),     // ten slave select signals out
@@ -359,5 +363,22 @@ module AHBliteTop (
        .HREADYOUT   (HREADYOUT_dummy), // ready output
        .HRESP       (HRESP_dummy)      // response output
        );
+       
+       
+ 
+ 
+ // ====================== SPI Master =======================================
+ 
+ //TODO: Will have to have shaired SPI wires 
+    AHBspi SPI(
+       .clk             (HCLK),             // bus clock
+       .miso            (aclMISO),  
+       .mosi            (aclMOSI),
+       .cs_bar_accel    (aclSSn), // accelerometer SPI slave select
+       .cs_bar_disp     (),
+       .sclk            (aclSCK)
+       );
+       
+    
 
 endmodule

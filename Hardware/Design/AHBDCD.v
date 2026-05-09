@@ -4,7 +4,7 @@
 //                                                                              //
 //Copyright (c) 2012, ARM All rights reserved.                                  //
 //                                                                              //
-//THIS END USER LICENCE AGREEMENT (“LICENCE”) IS A LEGAL AGREEMENT BETWEEN      //
+//THIS END USER LICENCE AGREEMENT (ï¿½LICENCEï¿½) IS A LEGAL AGREEMENT BETWEEN      //
 //YOU AND ARM LIMITED ("ARM") FOR THE USE OF THE SOFTWARE EXAMPLE ACCOMPANYING  //
 //THIS LICENCE. ARM IS ONLY WILLING TO LICENSE THE SOFTWARE EXAMPLE TO YOU ON   //
 //CONDITION THAT YOU ACCEPT ALL OF THE TERMS IN THIS LICENCE. BY INSTALLING OR  //
@@ -99,11 +99,11 @@ always @ (HADDR)
                   end
                   
             // SPI
-            8'h52: 				// Address range 0x2000_0000 to 0x20FF_FFFF  16MB
-                  begin
-                      HSEL_S4 = 1'b1;     // activate slave select 3 output
-                      MUX_SEL = 4'd4;     // send slave number 3 to multiplexers
-                  end
+            //8'h52: 				// Address range 0x2000_0000 to 0x20FF_FFFF  16MB
+                  //begin
+                      //HSEL_S4 = 1'b1;     // activate slave select 3 output
+                      //MUX_SEL = 4'd4;     // send slave number 3 to multiplexers
+                  //end
 
 //===================================================================================================
 

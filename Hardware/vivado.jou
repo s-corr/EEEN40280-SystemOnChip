@@ -2,10 +2,52 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Sat May  9 11:15:12 2026
-# Process ID: 411878
-# Log file: /home/dGnome/Code/College/EmbbedDes/SystemOnChip_ExampleProject/Hardware/vivado.log
-# Journal file: /home/dGnome/Code/College/EmbbedDes/SystemOnChip_ExampleProject/Hardware/vivado.jou
+# Start of session at: Thu Apr 16 13:11:54 2026
+# Process ID: 7704
+# Log file: C:/Users/lab/Documents/EmbeddedSystems/Thursday/DES_SoC/Hardware/vivado.log
+# Journal file: C:/Users/lab/Documents/EmbeddedSystems/Thursday/DES_SoC/Hardware\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project DemoSystem.xpr
+open_project C:/Users/lab/Documents/EmbeddedSystems/Thursday/DES_SoC/Hardware/DemoSystem.xpr
+open_hw
+connect_hw_server
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+set_property PROGRAM.FILE {C:/Users/lab/Documents/EmbeddedSystems/Thursday/DES_SoC/Hardware/DemoSystem.runs/impl_1/AHBliteTop.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/lab/Documents/EmbeddedSystems/Thursday/DES_SoC/Hardware/DemoSystem.runs/impl_1/AHBliteTop.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+close_hw_target
+refresh_hw_device [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/lab/Documents/EmbeddedSystems/Thursday/DES_SoC/Hardware/DemoSystem.runs/impl_1/AHBliteTop.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+close_hw
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+synth_design -rtl -name rtl_1 -rtl_skip_ip -rtl_skip_constraints
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+set_property PROGRAM.FILE {C:/Users/lab/Documents/EmbeddedSystems/Thursday/DES_SoC/Hardware/DemoSystem.runs/impl_1/AHBliteTop.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/lab/Documents/EmbeddedSystems/Thursday/DES_SoC/Hardware/DemoSystem.runs/impl_1/AHBliteTop.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+close_hw
