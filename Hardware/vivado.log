@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sat May  9 11:15:12 2026
+# Process ID: 411878
+# Log file: /home/dGnome/Code/College/EmbbedDes/SystemOnChip_ExampleProject/Hardware/vivado.log
+# Journal file: /home/dGnome/Code/College/EmbbedDes/SystemOnChip_ExampleProject/Hardware/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project DemoSystem.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/bmulkeen/ProjectFiles/SoC/DES_SoC/Hardware' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/dGnome/Applications/Vivado_2015p2/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:08 . Memory (MB): peak = 5711.445 ; gain = 105.941 ; free physical = 254 ; free virtual = 4244
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat May  9 11:18:03 2026...

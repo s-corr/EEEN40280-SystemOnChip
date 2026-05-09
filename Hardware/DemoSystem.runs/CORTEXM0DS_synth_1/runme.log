@@ -1,0 +1,281 @@
+
+*** Running vivado
+    with args -log CORTEXM0DS.vds -m64 -mode batch -messageDb vivado.pb -notrace -source CORTEXM0DS.tcl
+
+WARNING: Default location for XILINX_VIVADO_HLS not found: 
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source CORTEXM0DS.tcl -notrace
+Command: synth_design -top CORTEXM0DS -part xc7a100tcsg324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-1223] The version limit for your license is '2015.09' and will expire in -26 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 247.688 ; gain = 69.848
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'CORTEXM0DS' [C:/Users/lab/Documents/DES_SoC/Hardware/Source/CORTEXM0DS.v:28]
+INFO: [Synth 8-638] synthesizing module 'cortexm0ds_logic' [C:/Users/lab/Documents/DES_SoC/Hardware/Source/cortexm0ds_logic.v:28]
+INFO: [Synth 8-256] done synthesizing module 'cortexm0ds_logic' (1#1) [C:/Users/lab/Documents/DES_SoC/Hardware/Source/cortexm0ds_logic.v:28]
+INFO: [Synth 8-256] done synthesizing module 'CORTEXM0DS' (2#1) [C:/Users/lab/Documents/DES_SoC/Hardware/Source/CORTEXM0DS.v:28]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 450.168 ; gain = 272.328
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 450.168 ; gain = 272.328
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/lab/Documents/DES_SoC/Hardware/DES_M0_SoC.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc]
+Finished Parsing XDC File [C:/Users/lab/Documents/DES_SoC/Hardware/DES_M0_SoC.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 706.238 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 706.238 ; gain = 528.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 706.238 ; gain = 528.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 706.238 ; gain = 528.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 706.238 ; gain = 528.398
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     34 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     30 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 59    
++---Registers : 
+	                1 Bit    Registers := 839   
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 386   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module cortexm0ds_logic 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     34 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     30 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 59    
++---Registers : 
+	                1 Bit    Registers := 839   
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 386   
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 706.238 ; gain = 528.398
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 706.238 ; gain = 528.398
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 706.238 ; gain = 528.398
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 706.238 ; gain = 528.398
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 706.238 ; gain = 528.398
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 706.238 ; gain = 528.398
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:50 . Memory (MB): peak = 706.238 ; gain = 528.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 706.238 ; gain = 528.398
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 791.777 ; gain = 613.938
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 793.863 ; gain = 616.023
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 793.863 ; gain = 616.023
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 793.863 ; gain = 616.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 793.863 ; gain = 616.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 793.863 ; gain = 616.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    40|
+|2     |LUT1   |   135|
+|3     |LUT2   |   339|
+|4     |LUT3   |   275|
+|5     |LUT4   |   358|
+|6     |LUT5   |   529|
+|7     |LUT6   |  1894|
+|8     |MUXF7  |     5|
+|9     |FDCE   |   138|
+|10    |FDPE   |   705|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------+-----------------+------+
+|      |Instance  |Module           |Cells |
++------+----------+-----------------+------+
+|1     |top       |                 |  4418|
+|2     |  u_logic |cortexm0ds_logic |  4386|
++------+----------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 793.863 ; gain = 616.023
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:56 . Memory (MB): peak = 793.863 ; gain = 345.566
+Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 793.863 ; gain = 616.023
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 40 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'CORTEXM0DS' is not ideal for floorplanning, since the cellview 'cortexm0ds_logic' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/lab/Documents/DES_SoC/Hardware/DES_M0_SoC.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc]
+Finished Parsing XDC File [C:/Users/lab/Documents/DES_SoC/Hardware/DES_M0_SoC.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+16 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 793.863 ; gain = 603.801
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 793.863 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 26 15:17:57 2015...

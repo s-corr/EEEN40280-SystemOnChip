@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sat May  9 11:15:12 2026
+# Process ID: 411878
+# Log file: /home/dGnome/Code/College/EmbbedDes/SystemOnChip_ExampleProject/Hardware/vivado.log
+# Journal file: /home/dGnome/Code/College/EmbbedDes/SystemOnChip_ExampleProject/Hardware/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project DemoSystem.xpr
