@@ -73,10 +73,6 @@ module AHBliteTop (
     wire        HSEL_gpio, HREADYOUT_gpio;    // GPIO stuff ofc :)
     wire [31:0] HRDATA_gpio, HRDATA_uart;
     wire        HSEL_uart, HREADYOUT_uart, IRQ_uart;
-    
-    // SPI signals
-    wire        HSEL_spi, HREADYOUT_spi, IRQ_spi;
-    wire [31:0] HRDATA_spi;
  
 
 
@@ -151,7 +147,7 @@ module AHBliteTop (
 // ## Change this if you add a slave that uses an interrupt
 // Connect the interrupt signal from the slave to the appropriate bit of IRQ
 // Leave any unused interrupt inputs wired to 0 (inactive)
-    assign IRQ = {13'b0,IRQ_spi,IRQ_uart,1'b0};     // SPI and UART interrupts
+    assign IRQ = {14'b0,IRQ_uart,1'b0};     // no interrupts in use yet, so all signals 0
 
 // Instantiate Cortex-M0 DesignStart processor and connect signals 
     CORTEXM0DS cpu (
@@ -190,7 +186,7 @@ module AHBliteTop (
         .HSEL_S1    (HSEL_ram),
         .HSEL_S2    (HSEL_gpio),
         .HSEL_S3    (HSEL_uart),
-        .HSEL_S4    (HSEL_spi),
+        .HSEL_S4    (),
         .HSEL_S5    (),
         .HSEL_S6    (),
         .HSEL_S7    (),
@@ -214,7 +210,7 @@ module AHBliteTop (
         .HRDATA_S1      (HRDATA_ram),
         .HRDATA_S2      (HRDATA_gpio),
         .HRDATA_S3      (HRDATA_uart),
-        .HRDATA_S4      (HRDATA_spi),
+        .HRDATA_S4      (BAD_DATA),
         .HRDATA_S5      (BAD_DATA),
         .HRDATA_S6      (BAD_DATA),         // unused inputs give BAD_DATA
         .HRDATA_S7      (BAD_DATA),
@@ -228,7 +224,7 @@ module AHBliteTop (
         .HREADYOUT_S1   (HREADYOUT_ram),
         .HREADYOUT_S2   (HREADYOUT_gpio),
         .HREADYOUT_S3   (HREADYOUT_uart),             
-        .HREADYOUT_S4   (HREADYOUT_spi),
+        .HREADYOUT_S4   (1'b1),
         .HREADYOUT_S5   (1'b1),
         .HREADYOUT_S6   (1'b1),             // unused inputs must be tied to 1
         .HREADYOUT_S7   (1'b1),
@@ -345,28 +341,6 @@ module AHBliteTop (
                .serialRx    (serialRx),            // serial receive, idles at 1
                .serialTx    (serialTx),        // serial transmit, idles at 1
                .uart_IRQ    (IRQ_uart)            // interrupt request
-       );
-
-
-// ======================= SPI block ======================================
-// SPI master interface - connected to accelerometer signals
-    AHBspi SPI(
-               .HCLK        (HCLK),
-               .HRESETn     (HRESETn),
-               .HSEL        (HSEL_spi),
-               .HREADY      (HREADY),
-               .HADDR       (HADDR),
-               .HTRANS      (HTRANS),
-               .HWRITE      (HWRITE),
-               .HWDATA      (HWDATA),
-               .HRDATA      (HRDATA_spi),
-               .HREADYOUT   (HREADYOUT_spi),
-               .HRESP       (),
-               .SSel_n      (aclSSn),
-               .SCLK        (aclSCK),
-               .MOSI        (aclMOSI),
-               .MISO        (aclMISO),
-               .spi_IRQ     (IRQ_spi)
        );
 
 
