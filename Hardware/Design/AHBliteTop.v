@@ -371,13 +371,26 @@ module AHBliteTop (
  
  //TODO: Will have to have shaired SPI wires 
     AHBspi SPI(
+        // Inputs
        .clk             (HCLK),             // bus clock
        .miso            (aclMISO),  
+       
+       // ==== Software control Inputs ===
+               // To control the SPI master module software will be used to control registers
+       .dataTx          (),// byte to transmit
+       .cs_sel          (),// slave select (in 1-hot code for protection): 2'b00 = no selection, 2'b01 = accelerometer, 2'b10 = display 
+       .reset_spi       (),// syncrinus spi rest 
+       .tx_begin        (),// put high when want to start tx
+       .clkDelay        (),// sclk = 50MHZ/(clkDelay + 1) [4 bits]
+      
+      // Outputs
        .mosi            (aclMOSI),
        .cs_bar_accel    (aclSSn), // accelerometer SPI slave select
        .cs_bar_disp     (),
        .sclk            (aclSCK)
        );
+       
+
        
     
 
