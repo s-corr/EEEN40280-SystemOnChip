@@ -163,18 +163,18 @@ module AHBspi(
       
       // ========== Software Control ==========
        // To control the SPI master module software will be used to control registers
-      input [7:0] dataTx; // byte to transmit
-      input [1:0] cs_sel; // slave select (in 1-hot code for protection): 2'b00 = no selection, 2'b01 = accelerometer, 2'b10 = display 
+      input [7:0] dataTx, // byte to transmit
+      input [1:0] cs_sel, // slave select (in 1-hot code for protection): 2'b00 = no selection, 2'b01 = accelerometer, 2'b10 = display 
       input reset_spi, // syncrinus spi rest (active low) TODO: Add reset to all registers (currently just state machine)
-      input tx_begin; // put high when want to start tx
-      input [3:0] clkDelay; // sclk = 50MHZ/(clkDelay + 1) 
+      input tx_begin, // put high when want to start tx
+      input [3:0] clkDelay, // sclk = 50MHZ/(clkDelay + 1) 
 
 
 
       // Output 
-      output mosi, // Commands to slave
-      output cs_bar_accel, // accelerometer slave select (active low)
-      output cs_bar_disp, // Display slave select (active low)
+      output reg mosi, // Commands to slave
+      output reg cs_bar_accel, // accelerometer slave select (active low)
+      output reg cs_bar_disp, // Display slave select (active low)
       output reg sclk // Serial clock
     );
 	  
@@ -204,7 +204,7 @@ module AHBspi(
     wire cs_sel_H, cs_sel_L;
     wire sclk_rising, sclk_falling;
     reg nextSclk;
-    reg nexCountClk;
+    reg nextCountClk;
     
 
 
@@ -212,7 +212,7 @@ module AHBspi(
     // ======= States =====
     localparam [1:0] IDLE = 2'b00, // Inital state
                      PREP = 2'b01, // Preperation before TX
-                     TX = 2'b10, // Master is communicating with slave
+                     TX = 2'b10; // Master is communicating with slave
                      //COMPLETE = 2'b11; // communication complete
 
     reg [1:0] currentState = IDLE;
@@ -248,7 +248,7 @@ module AHBspi(
     // input MUX to countClock register 
     always @ (clkDelay, countClk, sclk)
         if (clkDelay == countClk) 
-             nextCountClock= 4'b0;
+             nextCountClk= 4'b0;
         else 
             nextCountClk = countClk + 4'b1;
 
@@ -413,8 +413,10 @@ module AHBspi(
            PREP:          nextState = TX;
           
            // Tx state loops untill all bits are recived.
-           TX:            if (countBit == 4'b1000) nextState = IDLE; 
-                          else nextState = TX;;
+           TX:            if (countBit == 4'b1000) 
+                            nextState = IDLE; 
+                          else 
+                            nextState = TX;
 
            default: nextState = IDLE; // safty
         endcase

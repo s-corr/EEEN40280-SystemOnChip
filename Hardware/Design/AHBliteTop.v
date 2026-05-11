@@ -31,9 +31,12 @@ module AHBliteTop (
     output serialTx,    // serial port transmit line
     output aclMOSI,     // accelerometer SPI MOSI signal
     output aclSCK,      // accelerometer SPI clock signal
-    output aclSSn       // accelerometer slave select signal, active low
+    output aclSSn,       // accelerometer slave select signal, active low
+    
+    output [7:0] segment,   // segment lines, active low, PABCDEFG // common anode
+    output [7:0] digit   // digit enable lines, active low, 0 on right // cathode
     );  // end of module port list
- 
+    
   localparam  BAD_DATA = 32'hdeadbeef;  // value read from invalid slave
   localparam  OKAY = 1'b0, ERROR = 1'b1;  // values for the HRESP signal
 
@@ -73,6 +76,18 @@ module AHBliteTop (
     wire        HSEL_gpio, HREADYOUT_gpio;    // GPIO stuff ofc :)
     wire [31:0] HRDATA_gpio, HRDATA_uart;
     wire        HSEL_uart, HREADYOUT_uart, IRQ_uart;
+    wire        HSEL_disp, HREADYOUT_disp;
+    wire [31:0] HSEL_disp;
+    
+    
+    // ================ Signals for SPI ===========
+    // i think has to be reg? then sofware can controll from this module level?
+    reg [7:0] HWDATA_spi; // byte to transmit to slave
+    reg [1:0] CS_spi; // slave select (in 1-hot code for protection): 2'b00 = no selection, 2'b01 = accelerometer, 2'b10 = display 
+    reg BEGIN_spi;// put high when want to start communication between master and selected slave
+    reg [3:0] CLKDELAY_spi;// Delay to make SCLK, I think SCLK of 5MHZ, sclk = 50MHZ/(clkDelay + 1) [4 bits, can be increased if needed] 
+   
+    
  
 
 
@@ -183,14 +198,14 @@ module AHBliteTop (
 // ======================== Address Decoder ======================================
 // Implements address map, generates slave select signals and controls mux
 // ## As you add more slaves, you need to use more of the slave select signals
-// TODO: NEED to add SPI to decoder ==> HSEL_spi (it's on the 4th)
+
     AHBDCD decode (
         .HADDR      (HADDR),        // address in
         .HSEL_S0    (HSEL_rom),     // ten slave select signals out
         .HSEL_S1    (HSEL_ram),
         .HSEL_S2    (HSEL_gpio),
         .HSEL_S3    (HSEL_uart),
-        .HSEL_S4    (),
+        .HSEL_S4    (HSEL_disp),
         .HSEL_S5    (),
         .HSEL_S6    (),
         .HSEL_S7    (),
@@ -214,7 +229,7 @@ module AHBliteTop (
         .HRDATA_S1      (HRDATA_ram),
         .HRDATA_S2      (HRDATA_gpio),
         .HRDATA_S3      (HRDATA_uart),
-        .HRDATA_S4      (BAD_DATA),
+        .HRDATA_S4      (HRDATA_disp),
         .HRDATA_S5      (BAD_DATA),
         .HRDATA_S6      (BAD_DATA),         // unused inputs give BAD_DATA
         .HRDATA_S7      (BAD_DATA),
@@ -228,7 +243,7 @@ module AHBliteTop (
         .HREADYOUT_S1   (HREADYOUT_ram),
         .HREADYOUT_S2   (HREADYOUT_gpio),
         .HREADYOUT_S3   (HREADYOUT_uart),             
-        .HREADYOUT_S4   (1'b1),
+        .HREADYOUT_S4   (HREADYOUT_disp),
         .HREADYOUT_S5   (1'b1),
         .HREADYOUT_S6   (1'b1),             // unused inputs must be tied to 1
         .HREADYOUT_S7   (1'b1),
@@ -377,11 +392,11 @@ module AHBliteTop (
        
        // ==== Software control Inputs ===
                // To control the SPI master module software will be used to control registers
-       .dataTx          (),// byte to transmit
-       .cs_sel          (),// slave select (in 1-hot code for protection): 2'b00 = no selection, 2'b01 = accelerometer, 2'b10 = display 
-       .reset_spi       (),// syncrinus spi rest (active low)
-       .tx_begin        (),// put high when want to start tx
-       .clkDelay        (),// sclk = 50MHZ/(clkDelay + 1) [4 bits]
+       .dataTx          (HWDATA_spi),// byte to transmit
+       .cs_sel          (CS_spi),// slave select (in 1-hot code for protection): 2'b00 = no selection, 2'b01 = accelerometer, 2'b10 = display 
+       .reset_spi       (HRESETn),// syncrinus spi rest (active low) // Right now i have it on the AHB-lite bus reset
+       .tx_begin        (BEGIN_spi),// put high when want to start tx
+       .clkDelay        (CLKDELAY_spi),// sclk = 50MHZ/(clkDelay + 1) [4 bits]
       
       // Outputs
        .mosi            (aclMOSI),
@@ -390,8 +405,39 @@ module AHBliteTop (
        .sclk            (aclSCK)
        );
        
+// ================== Display Hardware ========================================
+
+    AHBdisp DISPLAY(
+        // Bus signals
+        .HCLK           (HCLK),            // bus clock
+        .HRESETn        (HRESETn),         // bus reset, active low
+        .HSEL           (HSEL_disp),       // selects this slave
+        .HREADY         (HREADY),          // indicates previous transaction completing
+        .HADDR          (HADDR),     // address
+        .HTRANS         (HTRANS),    // transaction type (only bit 1 used)
+        .HWRITE         (HWRITE),         // write transaction
+//          input wire [2:0] HSIZE,     // transaction width ignored
+        .HWDATA         (HWDATA),   // write data
+        .HRDATA         (HRDATA_disp),  // read data from slave
+        .HREADYOUT      (HREADYOUT_disp),      // ready output from slave
+        
+        
+        // LED output signals
+        
+        // The display has two 4-digit LED 7-segment displays, these are tide to act as a single 8-digit display.
+        //
+        // The individual LED segments that make up an individual LED digit are labled from A to G as well as P 
+        //   for the decimal.The common anode takes an 8-bit enable signal as an input.
+        //
+        // For each individual LED digit on the display, the 7 anodes of the LED that make up the digit are 
+        //   tide to create a common annode per digit. The cathodes are avalible as inputs to the diplay.
+        //  
+        // To activate the anode is driven high and the cathode low, because of the driving transistors the 
+        //    anode is acive low. So to activate both signals must be set low.
+        .digit          (digit),     // digit enable lines, active low, 0 on right // cathode
+        .segment        (segment)        // segment lines, active low, PABCDEFG // common anode
+         );  // end of port list
+
 
        
-    
-
 endmodule

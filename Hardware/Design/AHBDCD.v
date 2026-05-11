@@ -98,12 +98,12 @@ always @ (HADDR)
                       MUX_SEL = 4'd3;     // send slave number 3 to multiplexers
                   end
                   
-            // SPI
-            //8'h52: 				// Address range 0x2000_0000 to 0x20FF_FFFF  16MB
-                  //begin
-                      //HSEL_S4 = 1'b1;     // activate slave select 3 output
-                      //MUX_SEL = 4'd4;     // send slave number 3 to multiplexers
-                  //end
+            // Display
+            8'h52: 				// Address range 0x2000_0000 to 0x20FF_FFFF  16MB
+                  begin
+                      HSEL_S4 = 1'b1;     // activate slave select 4 output
+                      MUX_SEL = 4'd4;     // send slave number 4 to multiplexers
+                  end
 
 //===================================================================================================
 
