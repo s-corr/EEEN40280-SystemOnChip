@@ -379,7 +379,7 @@ module AHBliteTop (
                // To control the SPI master module software will be used to control registers
        .dataTx          (),// byte to transmit
        .cs_sel          (),// slave select (in 1-hot code for protection): 2'b00 = no selection, 2'b01 = accelerometer, 2'b10 = display 
-       .reset_spi       (),// syncrinus spi rest 
+       .reset_spi       (),// syncrinus spi rest (active low)
        .tx_begin        (),// put high when want to start tx
        .clkDelay        (),// sclk = 50MHZ/(clkDelay + 1) [4 bits]
       

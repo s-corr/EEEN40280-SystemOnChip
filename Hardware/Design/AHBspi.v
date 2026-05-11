@@ -165,7 +165,7 @@ module AHBspi(
        // To control the SPI master module software will be used to control registers
       input [7:0] dataTx; // byte to transmit
       input [1:0] cs_sel; // slave select (in 1-hot code for protection): 2'b00 = no selection, 2'b01 = accelerometer, 2'b10 = display 
-      input reset_spi, // syncrinus spi rest 
+      input reset_spi, // syncrinus spi rest (active low) TODO: Add reset to all registers (currently just state machine)
       input tx_begin; // put high when want to start tx
       input [3:0] clkDelay; // sclk = 50MHZ/(clkDelay + 1) 
 
@@ -227,7 +227,8 @@ module AHBspi(
     // ========== Clock delayer =====
     // sclk register
     always @ (posedge clk)
-         sclk <= nextSclk;
+         if (!reset_spi) sclk <= 1'b0;
+         else sclk <= nextSclk;
     
     // input MUX to sclk register 
     always @ (clkDelay, countClk, sclk)
@@ -239,9 +240,17 @@ module AHBspi(
 
    // countClk register, increase 1 each clock, register reset is triggered when clkDelay == countClk
    always @ (posedge clk)
-        if (clkDelay == countClk) countClk <= 4'b0;// syncrinus reset 
-        else countClk <= countClk + 4'b1;
+        if (!reset_spi) 
+            countClk <= 4'b0;
+        else 
+            countClk <= nextCountClk;
 
+    // input MUX to countClock register 
+    always @ (clkDelay, countClk, sclk)
+        if (clkDelay == countClk) 
+             nextCountClock= 4'b0;
+        else 
+            nextCountClk = countClk + 4'b1;
 
 
 /*
@@ -263,7 +272,10 @@ module AHBspi(
 */
     // ========= sclk edge ditector=======
     always @ (posedge clk) 
-      sclk_prevVal <= sclk;
+      if (!reset_spi) 
+        sclk_prevVal <= 1'b1;// sclk is low idle (inital clock state), so will set to opposite
+      else
+        sclk_prevVal <= sclk;
 
     //wire sclk_rising = (sclkVal == 1'b1 && sclk_prevVal == 1'b0);
     //wire sclk_falling =  (sclkVal ==1'b0 && sclk_prevVal == 1'b1);
@@ -297,10 +309,16 @@ module AHBspi(
       
       // Registers for slave selects 
       always @ (posedge clk)
-        cs_bar_accel <= ~safe_cs_sel[1];
+        if (!reset_spi) 
+            cs_bar_accel <= 1'b1; // slave select is active low 
+        else 
+            cs_bar_accel <= ~safe_cs_sel[1];
 
       always @ (posedge clk)
-        cs_bar_disp <= ~safe_cs_sel[0];
+        if (!reset_spi) 
+            cs_bar_disp <= 1'b1; // slave select is active low 
+        else
+            cs_bar_disp <= ~safe_cs_sel[0];
 
 
     // ======= tx_begin fix for software control ====
@@ -377,7 +395,7 @@ module AHBspi(
     // === State register
     always @ (posedge clk) 
     begin
-      if (reset_spi) // syncrinus reset 
+      if (!reset_spi) // syncrinus reset 
         currentState <= IDLE;
       else 
         currentState <= nextState;
@@ -464,7 +482,10 @@ module AHBspi(
 // ====== SPI Communication Logic =========
 // MOSI register
 always @ (posedge clk)
-    mosi <= nextMosi;
+    if (!reset_spi)
+        mosi <= 1'b0;
+    else
+        mosi <= nextMosi;
  
 // MUX input to mosi register
 always @ (update_mosi, shiftReg, mosi)
@@ -475,7 +496,10 @@ always @ (update_mosi, shiftReg, mosi)
 
 // shiftReg register 
 always @ (posedge clk)
-  shiftReg <= nextShiftReg;
+    if (!reset_spi) 
+        shiftReg <= 4'b0;
+    else
+        shiftReg <= nextShiftReg;
 
 // MUX to change shiftReg register input 
 always @ (prep_shiftReg, read_miso, dataTx, shiftReg, miso)
@@ -487,12 +511,15 @@ always @ (prep_shiftReg, read_miso, dataTx, shiftReg, miso)
 
 // countBit register
 always @ (posedge clk)
-  countBit <= nextCountBit;
+    if (!reset_spi) 
+        countBit <= 4'b0;
+    else
+        countBit <= nextCountBit;
 
 // MUX to increase countBit 
 always @ (read_miso, countBit)
     begin
-         if (read_miso) nextCountBit = countBit + 1'b1;
+         if (read_miso) nextCountBit = countBit + 4'b0001;
          else nextCountBit = countBit;
     end
 
