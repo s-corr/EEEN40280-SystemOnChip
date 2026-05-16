@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.xpr">
+<Project Version="7" Minor="5" Path="/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="0cf0669fc6af4ee9943ea9c429f4cd74"/>
@@ -138,6 +138,13 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/Design/AHBspi.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/Design/spi.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

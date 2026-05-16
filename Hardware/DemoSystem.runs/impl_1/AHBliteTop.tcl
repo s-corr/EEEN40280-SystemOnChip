@@ -44,6 +44,8 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {Synth 8-312}  -suppress 
 set_msg_config  -id {IP_Flow 19-3664}  -suppress 
 
@@ -51,11 +53,25 @@ start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
   debug::add_scope template.lib 1
-  open_checkpoint /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/impl_1/AHBliteTop.dcp
+  set_property design_mode GateLvl [current_fileset]
   set_property webtalk.parent_dir /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.cache/wt [current_project]
   set_property parent.project_path /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.xpr [current_project]
   set_property ip_repo_paths /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.cache/ip [current_project]
   set_property ip_output_repo /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.cache/ip [current_project]
+  add_files -quiet /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/synth_1/AHBliteTop.dcp
+  add_files -quiet /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/CORTEXM0DS_synth_1/CORTEXM0DS.dcp
+  set_property netlist_only true [get_files /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/CORTEXM0DS_synth_1/CORTEXM0DS.dcp]
+  add_files -quiet /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/blk_mem_4Kword_synth_1/blk_mem_4Kword.dcp
+  set_property netlist_only true [get_files /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/blk_mem_4Kword_synth_1/blk_mem_4Kword.dcp]
+  add_files -quiet /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/blk_mem_8Kword_synth_1/blk_mem_8Kword.dcp
+  set_property netlist_only true [get_files /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/blk_mem_8Kword_synth_1/blk_mem_8Kword.dcp]
+  read_xdc -mode out_of_context -ref blk_mem_4Kword -cells U0 /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_4Kword/blk_mem_4Kword_ooc.xdc
+  set_property processing_order EARLY [get_files /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_4Kword/blk_mem_4Kword_ooc.xdc]
+  read_xdc -mode out_of_context -ref blk_mem_8Kword /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_8Kword_ooc.xdc
+  set_property processing_order EARLY [get_files /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/sources_1/ip/blk_mem_8Kword/blk_mem_8Kword_ooc.xdc]
+  read_xdc /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Constraint/Nexys4_SoC.xdc
+  read_xdc -mode out_of_context -ref CORTEXM0DS /home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc
+  link_design -top AHBliteTop -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {

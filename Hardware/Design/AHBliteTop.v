@@ -25,7 +25,7 @@ module AHBliteTop (
     input [15:0] sw,    // 16 slide switches on Nexys 4 board
     input serialRx,     // serial port receive line
     input aclMISO,      // accelerometer SPI MISO signal
-    output [15:0] led,  // 16 individual LEDs above slide switches   
+    outp8ut [15:0] led,  // 16 individual LEDs above slide switches   
     output [5:0] rgbLED,   // multi-colour LEDs {blu2, grn2, red2, blu1, grn1, red1} 
     output [7:0] JA,    // monitoring connector on FPGA board - use with oscilloscope
     output serialTx,    // serial port transmit line
@@ -81,11 +81,10 @@ module AHBliteTop (
     
     
     // ================ Signals for SPI ===========
-    // i think has to be reg? then sofware can controll from this module level?
-    reg [7:0] HWDATA_spi; // byte to transmit to slave
-    reg [1:0] CS_spi; // slave select (in 1-hot code for protection): 2'b00 = no selection, 2'b01 = accelerometer, 2'b10 = display 
-    reg BEGIN_spi;// put high when want to start communication between master and selected slave
-    reg [3:0] CLKDELAY_spi;// Delay to make SCLK, I think SCLK of 5MHZ, sclk = 50MHZ/(clkDelay + 1) [4 bits, can be increased if needed] 
+
+    
+    wire [31:0] HRDATA_spi;
+    wire        HSEL_spi, HREADYOUT_spi, IRQ_spi;
    
     
  
@@ -164,8 +163,9 @@ module AHBliteTop (
 // ## Change this if you add a slave that uses an interrupt
 // Connect the interrupt signal from the slave to the appropriate bit of IRQ
 // Leave any unused interrupt inputs wired to 0 (inactive)
-    assign IRQ = {14'b0,IRQ_uart,1'b0};     // no interrupts in use yet, so all signals 0
+    assign IRQ = {13'b0,IRQ_spi,IRQ_uart,1'b0};     // no interrupts in use yet, so all signals 0
     //TODO: might want a SPI interups ==> assign IRQ = {13'b0,IRQ_spi,IRQ_uart,1'b0};
+    // Efore SPI interups: assign IRQ = {14'b0,IRQ_uart,1'b0};
 
 // Instantiate Cortex-M0 DesignStart processor and connect signals 
     CORTEXM0DS cpu (
@@ -206,7 +206,7 @@ module AHBliteTop (
         .HSEL_S2    (HSEL_gpio),
         .HSEL_S3    (HSEL_uart),
         .HSEL_S4    (HSEL_disp),
-        .HSEL_S5    (),
+        .HSEL_S5    (HSEL_spi),
         .HSEL_S6    (),
         .HSEL_S7    (),
         .HSEL_S8    (),
@@ -230,7 +230,7 @@ module AHBliteTop (
         .HRDATA_S2      (HRDATA_gpio),
         .HRDATA_S3      (HRDATA_uart),
         .HRDATA_S4      (HRDATA_disp),
-        .HRDATA_S5      (BAD_DATA),
+        .HRDATA_S5      (HRDATA_spi),
         .HRDATA_S6      (BAD_DATA),         // unused inputs give BAD_DATA
         .HRDATA_S7      (BAD_DATA),
         .HRDATA_S8      (BAD_DATA),
@@ -244,7 +244,7 @@ module AHBliteTop (
         .HREADYOUT_S2   (HREADYOUT_gpio),
         .HREADYOUT_S3   (HREADYOUT_uart),             
         .HREADYOUT_S4   (HREADYOUT_disp),
-        .HREADYOUT_S5   (1'b1),
+        .HREADYOUT_S5   (HREADYOUT_spi),
         .HREADYOUT_S6   (1'b1),             // unused inputs must be tied to 1
         .HREADYOUT_S7   (1'b1),
         .HREADYOUT_S8   (1'b1),
@@ -382,28 +382,6 @@ module AHBliteTop (
        
  
  
- // ====================== SPI Master =======================================
- 
- //TODO: Will have to have shaired SPI wires 
-    AHBspi SPI(
-        // Inputs
-       .clk             (HCLK),             // bus clock
-       .miso            (aclMISO),  
-       
-       // ==== Software control Inputs ===
-               // To control the SPI master module software will be used to control registers
-       .dataTx          (HWDATA_spi),// byte to transmit
-       .cs_sel          (CS_spi),// slave select (in 1-hot code for protection): 2'b00 = no selection, 2'b01 = accelerometer, 2'b10 = display 
-       .reset_spi       (HRESETn),// syncrinus spi rest (active low) // Right now i have it on the AHB-lite bus reset
-       .tx_begin        (BEGIN_spi),// put high when want to start tx
-       .clkDelay        (CLKDELAY_spi),// sclk = 50MHZ/(clkDelay + 1) [4 bits]
-      
-      // Outputs
-       .mosi            (aclMOSI),
-       .cs_bar_accel    (aclSSn), // accelerometer SPI slave select
-       .cs_bar_disp     (),
-       .sclk            (aclSCK)
-       );
        
 // ================== Display Hardware ========================================
 
@@ -438,6 +416,28 @@ module AHBliteTop (
         .segment        (segment)        // segment lines, active low, PABCDEFG // common anode
          );  // end of port list
 
+ // ====================== SPI =======================================
+ 
+    AHBspi SPI(
+            // Bus signals
+            .HCLK (HCLK),            // bus clock
+            .HRESETn     (HRESETn),             // bus reset, active low
+            .HSEL        (HSEL_spi),            // selects this slave
+            .HREADY      (HREADY),              // indicates previous transaction completing
+            .HADDR       (HADDR),               // address
+            .HTRANS      (HTRANS),              // transaction type (only bit 1 used)
+            .HWRITE      (HWRITE),              // write transaction
+            // input  [2:0] HSIZE,        // transaction width ignored
+            .HWDATA      (HWDATA),              // write data
+            .HRDATA      (HRDATA_spi),
+            .HREADYOUT   (HREADYOUT_spi),        // ready output from slave
+            .HRESP       (),         // reponse output to master
+            // SPI signals
+            .mosi        (aclMOSI),            // SPI master output
+            .miso        (aclMISO),        // SPI slave output
+            .spi_IRQ     (IRQ_spi)            // interrupt request
+            .CSn_acl     (aclSSn)              // SPI slave select (only one slave)
+    );
 
        
 endmodule

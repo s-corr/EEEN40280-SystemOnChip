@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1778368075">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1778522832">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="AHBliteTop.vdi"/>
   <File Type="BG-DRC" Name="AHBliteTop.drc"/>
@@ -13,42 +13,41 @@
   <File Type="BG-BIN" Name="AHBliteTop.bin"/>
   <File Type="BG-BIT" Name="AHBliteTop.bit"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="AHBliteTop_timing_summary_postroute_physopted.rpx"/>
-  <File Type="PLACE-CLK" Name="AHBliteTop_clock_utilization_placed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="AHBliteTop_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="AHBliteTop_postroute_physopt.dcp"/>
+  <File Type="ROUTE-CLK" Name="AHBliteTop_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="AHBliteTop_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="AHBliteTop_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="AHBliteTop_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="AHBliteTop_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="AHBliteTop_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="AHBliteTop_route_status.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="AHBliteTop_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="AHBliteTop_power_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="AHBliteTop_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="AHBliteTop_drc_routed.rpt"/>
+  <File Type="ROUTE-DCP" Name="AHBliteTop_routed.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="AHBliteTop_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="AHBliteTop_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="AHBliteTop_postplace_pwropt.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="AHBliteTop_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="AHBliteTop_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="AHBliteTop_control_sets_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="AHBliteTop_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="AHBliteTop_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="AHBliteTop_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="AHBliteTop_io_placed.rpt"/>
   <File Type="PLACE-DCP" Name="AHBliteTop_placed.dcp"/>
   <File Type="PWROPT-DRC" Name="AHBliteTop_drc_pwropted.rpt"/>
-  <File Type="PLACE-CTRL" Name="AHBliteTop_control_sets_placed.rpt"/>
   <File Type="PWROPT-DCP" Name="AHBliteTop_pwropt.dcp"/>
   <File Type="OPT-HWDEF" Name="AHBliteTop.hwdef"/>
-  <File Type="PA-DCP" Name="AHBliteTop.dcp"/>
   <File Type="OPT-DRC" Name="AHBliteTop_drc_opted.rpt"/>
-  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
-  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
-  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
-  <File Type="PLACE-IO" Name="AHBliteTop_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="AHBliteTop_utilization_placed.rpt"/>
   <File Type="OPT-DCP" Name="AHBliteTop_opt.dcp"/>
-  <File Type="PLACE-SIMILARITY" Name="AHBliteTop_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="AHBliteTop_incremental_reuse_pre_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="AHBliteTop_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="AHBliteTop_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="AHBliteTop_drc_physopted.rpt"/>
-  <File Type="ROUTE-DCP" Name="AHBliteTop_routed.dcp"/>
-  <File Type="ROUTE-DRC" Name="AHBliteTop_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="AHBliteTop_drc_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="AHBliteTop_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="AHBliteTop_power_summary_routed.pb"/>
-  <File Type="ROUTE-STATUS" Name="AHBliteTop_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="AHBliteTop_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="AHBliteTop_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="AHBliteTop_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="AHBliteTop_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="AHBliteTop_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="AHBliteTop_clock_utilization_routed.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="AHBliteTop_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="AHBliteTop_timing_summary_postroute_physopted.rpt"/>
-  <File Type="PA-TCL" Name="AHBliteTop.tcl"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="AHBliteTop_timing_summary_postroute_physopted.pb"/>
+  <File Type="PA-TCL" Name="AHBliteTop.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/Design/uart_RXonly.v">
@@ -205,6 +204,6 @@
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_8Kword"/>
-  <BlockFileSet Type="BlockSrcs" Name="CORTEXM0DS"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_4Kword"/>
+  <BlockFileSet Type="BlockSrcs" Name="CORTEXM0DS"/>
 </GenRun>

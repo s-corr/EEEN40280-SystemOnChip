@@ -138,58 +138,57 @@ set_property PACKAGE_PIN L16 [get_ports {rgbLED[5]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {rgbLED[5]}]
 
 
-## 8-digit 7-segment display: 8 signals to control the segments of a digit,
-## and 8 signals to control the digits.  Signal names differ from the data sheet.
-## Segment order is PABCDEFG.  Digit 0 is on the right.
-##Bank = 34, Pin name = IO_L16P_T2_34,						Sch name = DP
-#set_property PACKAGE_PIN M4 [get_ports {segment[7]}]							
-#set_property IOSTANDARD LVCMOS33 [get_ports {segment[7]}]
-##Bank = 34, Pin name = IO_L2N_T0_34,						Sch name = CA
-#set_property PACKAGE_PIN L3 [get_ports {segment[6]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {segment[6]}]
-##Bank = 34, Pin name = IO_L3N_T0_DQS_34,					Sch name = CB
-#set_property PACKAGE_PIN N1 [get_ports {segment[5]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {segment[5]}]
-##Bank = 34, Pin name = IO_L6N_T0_VREF_34,					Sch name = CC
-#set_property PACKAGE_PIN L5 [get_ports {segment[4]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {segment[4]}]
-##Bank = 34, Pin name = IO_L5N_T0_34,						Sch name = CD
-#set_property PACKAGE_PIN L4 [get_ports {segment[3]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {segment[3]}]
-##Bank = 34, Pin name = IO_L2P_T0_34,						Sch name = CE
-#set_property PACKAGE_PIN K3 [get_ports {segment[2]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {segment[2]}]
-##Bank = 34, Pin name = IO_L4N_T0_34,						Sch name = CF
-#set_property PACKAGE_PIN M2 [get_ports {segment[1]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {segment[1]}]
-##Bank = 34, Pin name = IO_L6P_T0_34,						Sch name = CG
-#set_property PACKAGE_PIN L6 [get_ports {segment[0]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {segment[0]}]
-
+# 8-digit 7-segment display: 8 signals to control the segments of a digit,
+# and 8 signals to control the digits.  Signal names differ from the data sheet.
+# Segment order is PABCDEFG.  Digit 0 is on the right.
+#Bank = 34, Pin name = IO_L16P_T2_34,						Sch name = DP
+set_property PACKAGE_PIN M4 [get_ports {segment[7]}]							
+set_property IOSTANDARD LVCMOS33 [get_ports {segment[7]}]
+#Bank = 34, Pin name = IO_L2N_T0_34,						Sch name = CA
+set_property PACKAGE_PIN L3 [get_ports {segment[6]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {segment[6]}]
+#Bank = 34, Pin name = IO_L3N_T0_DQS_34,					Sch name = CB
+set_property PACKAGE_PIN N1 [get_ports {segment[5]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {segment[5]}]
+#Bank = 34, Pin name = IO_L6N_T0_VREF_34,					Sch name = CC
+set_property PACKAGE_PIN L5 [get_ports {segment[4]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {segment[4]}]
+#Bank = 34, Pin name = IO_L5N_T0_34,						Sch name = CD
+set_property PACKAGE_PIN L4 [get_ports {segment[3]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {segment[3]}]
+#Bank = 34, Pin name = IO_L2P_T0_34,						Sch name = CE
+set_property PACKAGE_PIN K3 [get_ports {segment[2]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {segment[2]}]
+#Bank = 34, Pin name = IO_L4N_T0_34,						Sch name = CF
+set_property PACKAGE_PIN M2 [get_ports {segment[1]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {segment[1]}]
+#Bank = 34, Pin name = IO_L6P_T0_34,						Sch name = CG
+set_property PACKAGE_PIN L6 [get_ports {segment[0]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {segment[0]}]
 ##Bank = 34, Pin name = IO_L18N_T2_34,						Sch name = AN0
-#set_property PACKAGE_PIN N6 [get_ports {digit[0]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {digit[0]}]
-##Bank = 34, Pin name = IO_L18P_T2_34,						Sch name = AN1
-#set_property PACKAGE_PIN M6 [get_ports {digit[1]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {digit[1]}]
-##Bank = 34, Pin name = IO_L4P_T0_34,						Sch name = AN2
-#set_property PACKAGE_PIN M3 [get_ports {digit[2]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {digit[2]}]
-##Bank = 34, Pin name = IO_L13_T2_MRCC_34,					Sch name = AN3
-#set_property PACKAGE_PIN N5 [get_ports {digit[3]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {digit[3]}]
-##Bank = 34, Pin name = IO_L3P_T0_DQS_34,					Sch name = AN4
-#set_property PACKAGE_PIN N2 [get_ports {digit[4]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {digit[4]}]
-##Bank = 34, Pin name = IO_L16N_T2_34,						Sch name = AN5
-#set_property PACKAGE_PIN N4 [get_ports {digit[5]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {digit[5]}]
-##Bank = 34, Pin name = IO_L1P_T0_34,						Sch name = AN6
-#set_property PACKAGE_PIN L1 [get_ports {digit[6]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {digit[6]}]
-##Bank = 34, Pin name = IO_L1N_T034,							Sch name = AN7
-#set_property PACKAGE_PIN M1 [get_ports {digit[7]}]					
-#set_property IOSTANDARD LVCMOS33 [get_ports {digit[7]}]
+set_property PACKAGE_PIN N6 [get_ports {digit[0]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {digit[0]}]
+#Bank = 34, Pin name = IO_L18P_T2_34,						Sch name = AN1
+set_property PACKAGE_PIN M6 [get_ports {digit[1]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {digit[1]}]
+#Bank = 34, Pin name = IO_L4P_T0_34,						Sch name = AN2
+set_property PACKAGE_PIN M3 [get_ports {digit[2]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {digit[2]}]
+#Bank = 34, Pin name = IO_L13_T2_MRCC_34,					Sch name = AN3
+set_property PACKAGE_PIN N5 [get_ports {digit[3]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {digit[3]}]
+#Bank = 34, Pin name = IO_L3P_T0_DQS_34,					Sch name = AN4
+set_property PACKAGE_PIN N2 [get_ports {digit[4]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {digit[4]}]
+#Bank = 34, Pin name = IO_L16N_T2_34,						Sch name = AN5
+set_property PACKAGE_PIN N4 [get_ports {digit[5]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {digit[5]}]
+#Bank = 34, Pin name = IO_L1P_T0_34,						Sch name = AN6
+set_property PACKAGE_PIN L1 [get_ports {digit[6]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {digit[6]}]
+#Bank = 34, Pin name = IO_L1N_T034,							Sch name = AN7
+set_property PACKAGE_PIN M1 [get_ports {digit[7]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {digit[7]}]
 
 
 # Buttons - six pushbuttons, the CPU RESET button signal is active low
