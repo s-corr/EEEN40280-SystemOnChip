@@ -85,28 +85,28 @@ always @ (HADDR)
                 end
 //========================================[We made this]========================================================
             // GPIO
-            8'h50: 				// Address range 0x2000_0000 to 0x20FF_FFFF  16MB
+            8'h50: 				// Address range 0x5000_0000 to 0x50FF_FFFF  16MB
                begin
                    HSEL_S2 = 1'b1;     // activate slave select 2 output
                    MUX_SEL = 4'd2;     // send slave number 2 to multiplexers
                end
             
             // UART
-            8'h51: 				// Address range 0x2000_0000 to 0x20FF_FFFF  16MB
+            8'h51: 				// Address range 0x5100_0000 to 0x51FF_FFFF  16MB
                   begin
                       HSEL_S3 = 1'b1;     // activate slave select 3 output
                       MUX_SEL = 4'd3;     // send slave number 3 to multiplexers
                   end
                   
             // Display
-            8'h52: 				// Address range 0x2000_0000 to 0x20FF_FFFF  16MB
+            8'h52: 				// Address range 0x5200_0000 to 0x52FF_FFFF  16MB
                   begin
                       HSEL_S4 = 1'b1;     // activate slave select 4 output
                       MUX_SEL = 4'd4;     // send slave number 4 to multiplexers
                   end
                   
                               // SPI
-              8'h53:                 // Address range 0x2000_0000 to 0x20FF_FFFF  16MB
+              8'h53:                 // Address range 0x5300_0000 to 0x53FF_FFFF  16MB
                     begin
                         HSEL_S5 = 1'b1;     // activate slave select 5 output
                         MUX_SEL = 4'd5;     // send slave number 5 to multiplexers

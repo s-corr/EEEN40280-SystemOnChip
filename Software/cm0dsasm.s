@@ -43,7 +43,7 @@ __Vectors    	DCD		Stack_Top			; Initial Stack Pointer
 				; External Interrupts
 				DCD		0					; IRQn value 0  
 				DCD		UART_Handler		; IRQn value 1
-				DCD		0					; IRQn value 2
+				DCD		SPI_Handler					; IRQn value 2
 				DCD		0
 				DCD		0
 				DCD		0
@@ -89,6 +89,15 @@ UART_Handler    PROC
 				IMPORT 	UART_ISR
                 PUSH    {R0,R1,R2,LR}
 				BL 		UART_ISR
+                POP     {R0,R1,R2,PC}
+                ENDP
+
+
+SPI_Handler     PROC
+                EXPORT  SPI_Handler
+        IMPORT  SPI_ISR
+                PUSH    {R0,R1,R2,LR}
+        BL    SPI_ISR
                 POP     {R0,R1,R2,PC}
                 ENDP
 

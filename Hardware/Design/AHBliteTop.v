@@ -25,7 +25,7 @@ module AHBliteTop (
     input [15:0] sw,    // 16 slide switches on Nexys 4 board
     input serialRx,     // serial port receive line
     input aclMISO,      // accelerometer SPI MISO signal
-    outp8ut [15:0] led,  // 16 individual LEDs above slide switches   
+    output [15:0] led,  // 16 individual LEDs above slide switches   
     output [5:0] rgbLED,   // multi-colour LEDs {blu2, grn2, red2, blu1, grn1, red1} 
     output [7:0] JA,    // monitoring connector on FPGA board - use with oscilloscope
     output serialTx,    // serial port transmit line
@@ -77,7 +77,7 @@ module AHBliteTop (
     wire [31:0] HRDATA_gpio, HRDATA_uart;
     wire        HSEL_uart, HREADYOUT_uart, IRQ_uart;
     wire        HSEL_disp, HREADYOUT_disp;
-    wire [31:0] HSEL_disp;
+    wire [31:0] HRDATA_disp;
     
     
     // ================ Signals for SPI ===========
@@ -431,12 +431,13 @@ module AHBliteTop (
             .HWDATA      (HWDATA),              // write data
             .HRDATA      (HRDATA_spi),
             .HREADYOUT   (HREADYOUT_spi),        // ready output from slave
-            .HRESP       (),         // reponse output to master
+            //.HRESP       (),         // reponse output to master
             // SPI signals
             .mosi        (aclMOSI),            // SPI master output
             .miso        (aclMISO),        // SPI slave output
-            .spi_IRQ     (IRQ_spi)            // interrupt request
-            .CSn_acl     (aclSSn)              // SPI slave select (only one slave)
+            .spi_IRQ     (IRQ_spi),            // interrupt request
+            .CSn_acl     (aclSSn),              // SPI slave select (only one slave)
+            .sclk        (aclSCK)      // accelerometer SPI clock signal
     );
 
        

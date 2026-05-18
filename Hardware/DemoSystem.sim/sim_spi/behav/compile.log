@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Testbench/TB_AHBspi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB_AHBspi
+WARNING: [VRFC 10-756] identifier errCount is used before its declaration [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Testbench/TB_AHBspi.v:235]
+WARNING: [VRFC 10-756] identifier errCount is used before its declaration [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Testbench/TB_AHBspi.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBspi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHBspi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/spi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi
+WARNING: [VRFC 10-756] identifier clear_countBit is used before its declaration [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/spi.v:291]
+WARNING: [VRFC 10-756] identifier clear_countBit is used before its declaration [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/spi.v:303]
+WARNING: [VRFC 10-756] identifier clear_countBit is used before its declaration [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/spi.v:326]
+WARNING: [VRFC 10-756] identifier clear_countBit is used before its declaration [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/spi.v:341]
+WARNING: [VRFC 10-756] identifier clear_countBit is used before its declaration [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/spi.v:356]
+WARNING: [VRFC 10-756] identifier clear_countBit is used before its declaration [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/spi.v:370]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.sim/sim_spi/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

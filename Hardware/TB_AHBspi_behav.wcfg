@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_AHBspi_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_AHBspi" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="39" />
+   <wvobject db_ref_id="1" type="logic" fp_name="/TB_AHBspi/HCLK">
+      <obj_property name="ElementShortName">HCLK</obj_property>
+      <obj_property name="ObjectShortName">HCLK</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/TB_AHBspi/HRESETn">
+      <obj_property name="ElementShortName">HRESETn</obj_property>
+      <obj_property name="ObjectShortName">HRESETn</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/TB_AHBspi/HSELx">
+      <obj_property name="ElementShortName">HSELx</obj_property>
+      <obj_property name="ObjectShortName">HSELx</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/HADDR">
+      <obj_property name="ElementShortName">HADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/HTRANS">
+      <obj_property name="ElementShortName">HTRANS[1:0]</obj_property>
+      <obj_property name="ObjectShortName">HTRANS[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/TB_AHBspi/HWRITE">
+      <obj_property name="ElementShortName">HWRITE</obj_property>
+      <obj_property name="ObjectShortName">HWRITE</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/HSIZE">
+      <obj_property name="ElementShortName">HSIZE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">HSIZE[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/HWDATA">
+      <obj_property name="ElementShortName">HWDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HWDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/HRDATA">
+      <obj_property name="ElementShortName">HRDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HRDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/TB_AHBspi/HREADY">
+      <obj_property name="ElementShortName">HREADY</obj_property>
+      <obj_property name="ObjectShortName">HREADY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/TB_AHBspi/HREADYOUT">
+      <obj_property name="ElementShortName">HREADYOUT</obj_property>
+      <obj_property name="ObjectShortName">HREADYOUT</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/TB_AHBspi/miso">
+      <obj_property name="ElementShortName">miso</obj_property>
+      <obj_property name="ObjectShortName">miso</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/TB_AHBspi/mosi">
+      <obj_property name="ElementShortName">mosi</obj_property>
+      <obj_property name="ObjectShortName">mosi</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/TB_AHBspi/CSn_acl">
+      <obj_property name="ElementShortName">CSn_acl</obj_property>
+      <obj_property name="ObjectShortName">CSn_acl</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/TB_AHBspi/spi_IRQ">
+      <obj_property name="ElementShortName">spi_IRQ</obj_property>
+      <obj_property name="ObjectShortName">spi_IRQ</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/TB_AHBspi/sclk">
+      <obj_property name="ElementShortName">sclk</obj_property>
+      <obj_property name="ObjectShortName">sclk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/i">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/nextWdata">
+      <obj_property name="ElementShortName">nextWdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">nextWdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/expectRdata">
+      <obj_property name="ElementShortName">expectRdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expectRdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/rExpectRead">
+      <obj_property name="ElementShortName">rExpectRead[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rExpectRead[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/rReadType">
+      <obj_property name="ElementShortName">rReadType[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rReadType[4:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/TB_AHBspi/checkRead">
+      <obj_property name="ElementShortName">checkRead</obj_property>
+      <obj_property name="ObjectShortName">checkRead</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/readCapture">
+      <obj_property name="ElementShortName">readCapture[31:0]</obj_property>
+      <obj_property name="ObjectShortName">readCapture[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/TB_AHBspi/transState">
+      <obj_property name="ElementShortName">transState</obj_property>
+      <obj_property name="ObjectShortName">transState</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/TB_AHBspi/error">
+      <obj_property name="ElementShortName">error</obj_property>
+      <obj_property name="ObjectShortName">error</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/errCount">
+      <obj_property name="ElementShortName">errCount[31:0]</obj_property>
+      <obj_property name="ObjectShortName">errCount[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/BYTE">
+      <obj_property name="ElementShortName">BYTE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">BYTE[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/HALF">
+      <obj_property name="ElementShortName">HALF[2:0]</obj_property>
+      <obj_property name="ObjectShortName">HALF[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/WORD">
+      <obj_property name="ElementShortName">WORD[2:0]</obj_property>
+      <obj_property name="ObjectShortName">WORD[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/IDLE">
+      <obj_property name="ElementShortName">IDLE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">IDLE[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/NONSEQ">
+      <obj_property name="ElementShortName">NONSEQ[1:0]</obj_property>
+      <obj_property name="ObjectShortName">NONSEQ[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/RXDATA">
+      <obj_property name="ElementShortName">RXDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RXDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/TXDATA">
+      <obj_property name="ElementShortName">TXDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TXDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/STATUS">
+      <obj_property name="ElementShortName">STATUS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">STATUS[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/CONTRL">
+      <obj_property name="ElementShortName">CONTRL[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CONTRL[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/CLKDELAY">
+      <obj_property name="ElementShortName">CLKDELAY[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLKDELAY[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/ENSPI">
+      <obj_property name="ElementShortName">ENSPI[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ENSPI[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/FRAME">
+      <obj_property name="ElementShortName">FRAME[31:0]</obj_property>
+      <obj_property name="ObjectShortName">FRAME[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/TB_AHBspi/CS">
+      <obj_property name="ElementShortName">CS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CS[31:0]</obj_property>
+   </wvobject>
+</wave_config>

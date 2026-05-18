@@ -15,13 +15,6 @@ typedef unsigned       int  uint32;
 typedef   signed       int   int32;
 
 
-// SPI INTERFACE - Relative Offsets for Data lane, CS and status
-#define SPI_BASE   0x52000000
-#define SPI_DATA   (*((volatile uint8  *)(SPI_BASE + 0x00)))
-#define SPI_CSn    (*((volatile uint8  *)(SPI_BASE + 0x04)))
-#define SPI_STATUS (*((volatile uint8  *)(SPI_BASE + 0x08)))
-#define SPI_CTRL   (*((volatile uint8  *)(SPI_BASE + 0x0C)))
-
 #pragma anon_unions
 
 
@@ -61,8 +54,6 @@ typedef struct
 #define UART_TXD (pt2UART->TxData)
 #define UART_STS (pt2UART->Status)
 #define UART_CTL (pt2UART->Control)
-
-
 // =================================================================
 // Structs for registers in the GPIO hardware
 struct TwoByte		// this combines two 8-bit values
@@ -153,12 +144,104 @@ typedef struct {
 #define NVIC_UART_BIT_POS		1      // bit position of UART in ARM's interrupt control register
 
 
+
+
+
+// ================================================================
+// Structs for registers in the SPI hardware
+
+typedef struct 
+{
+    volatile uint16 RxData;
+
+    union
+    {
+      volatile uint8 TxData;
+      volatile uint16 reserved0;
+    };
+    union
+    {
+      volatile uint8 Status;
+      volatile uint16 reserved1;
+    };
+    union
+    {
+      volatile uint8 Control;
+      volatile uint16 reserved2;
+    };
+    union
+    {
+      volatile uint8 ClkDelay;
+      volatile uint16 reserved3;
+    };
+    union
+    {
+      volatile uint8 EnSpi;
+      volatile uint16 reserved4;
+    };
+    union
+    {
+      volatile uint8 FrameBits;
+      volatile uint16 reserved5;
+    };
+    union
+    {
+      volatile uint8 AclSel;
+      volatile uint16 reserved6;
+    };
+} SPI_block;
+// bit position defs for the SPI status register
+#define SPI_IS_SPI_BUSY		0			// High if SPI is runnung 
+#define SPI_DATARX_READY	1			// High if all data has been recived and can be read
+
+// Simple names for the UART registers
+#define SPI_RXD (pt2SPI->RxData) // Data resived from slave 
+#define SPI_TXD (pt2SPI->TxData) // Data to send to slave
+#define SPI_STS (pt2SPI->Status) // register wirh dataRx_ready and is_spi_busy 
+#define SPI_CTL (pt2SPI->Control) // Control to set status bit as interupt (ie Status = {10} == dataRx_ready will interupt when high, is_spi_busy will not interupt when high)
+#define SPI_CDL (pt2SPI->ClkDelay) // sets clock delay which createws sclk from hclk 
+#define SPI_EN  (pt2SPI->EnSpi)  // Set high to enable spi (auto sets low after transaction completed)
+#define SPI_FRM (pt2SPI->FrameBits) // Size of transaction (e.g. command byte + address byte + two response bytes) 
+#define SPI_CS (pt2SPI->Control) // Acceleromiter Slace select (active high)
+                                 
+// ==================================================
+// Structs for registers in the Display hardware
+
+uint8* displayReg = (uint8*) DISPLAY_BASE;
+
+// Access display registers 0 to 9 with displayReg[x]
+// From AHBdisp.v:
+//                  7-segment display on Nexys-4 board.
+//      Address 0 - 8-bit read/write register with data for digit 0 (rightmost digit)
+//      Address 1 to 7 - same for other digits, address 7 is for leftmost digit
+//      Address 8 - 8-bit read/write register with mode bits, one per digit
+//                  0 = raw mode, data in register controls segments directly: PABCDEFG
+//                      0 = off, 1 = on
+//                  1 = hex mode, data[7] controls the dot as above, data[4:0] selects
+//                      a pattern to display: hex digits and others, see table in code
+//      Address 9 - 8-bit read/write register with enable bits: 0 = off, 1 - enabled 
+//      For registers 8 and 9, bit 0 controls the rightmost digit
+//
+//      This version only allows 8-bit write transactions, reads can be 8, 16 or 32 bits.
+//
+//      The display refresh rate is the clock frequency divided by
+//      2^D_WIDTH.  D_WIDTH is a parameter, with default value 20, which sets
+//      number of bits in a counter that controls cycling through the digits.
+//      With a 50 MHz clock, D_WIDTH = 20 gives refresh rate ~48 Hz, so the 
+//      display cycles through all 8 digits every ~21 ms.
+
+
+
+
 // =================================================================
 // Use the typedefs above to define the memory map
 #define pt2NVIC ((NVIC_block *)0xE000E100)
 #define pt2SysTick  ((SysTick_block *) 0xE000E010)
 #define pt2UART ((UART_block *)0x51000000)
 #define pt2GPIO ((GPIO_block *)0x50000000)
+#define pt2SPI  ((SPI_block *)0x53000000)
+#define DISPLAY_BASE 0x52000000
+
 
 
 #endif

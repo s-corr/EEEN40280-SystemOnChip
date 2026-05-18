@@ -14,18 +14,14 @@ Command: synth_design -top AHBliteTop -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
-WARNING: [Synth 8-1083] HSEL_disp was previously declared without a range [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:80]
-WARNING: [Synth 8-976] HSEL_disp has already been declared [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:80]
-WARNING: [Synth 8-2654] second declaration of HSEL_disp ignored [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:80]
-INFO: [Synth 8-994] HSEL_disp is declared here [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:79]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 894.277 ; gain = 149.559 ; free physical = 140 ; free virtual = 3609
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 885.242 ; gain = 140.527 ; free physical = 425 ; free virtual = 4383
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'AHBliteTop' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:17]
+INFO: [Synth 8-638] synthesizing module 'AHBliteTop' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:17]
 	Parameter BAD_DATA bound to: -559038737 - type: integer 
 	Parameter OKAY bound to: 1'b0 
 	Parameter ERROR bound to: 1'b1 
-INFO: [Synth 8-638] synthesizing module 'clock_gen' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/clock_gen.v:62]
+INFO: [Synth 8-638] synthesizing module 'clock_gen' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/clock_gen.v:62]
 INFO: [Synth 8-638] synthesizing module 'IBUF' [/home/dGnome/Applications/Vivado_2015p2/Vivado/2015.2/scripts/rt/data/unisim_comp.v:10256]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
@@ -68,29 +64,28 @@ INFO: [Synth 8-638] synthesizing module 'PLLE2_ADV' [/home/dGnome/Applications/V
 INFO: [Synth 8-256] done synthesizing module 'PLLE2_ADV' (2#1) [/home/dGnome/Applications/Vivado_2015p2/Vivado/2015.2/scripts/rt/data/unisim_comp.v:26066]
 INFO: [Synth 8-638] synthesizing module 'BUFG' [/home/dGnome/Applications/Vivado_2015p2/Vivado/2015.2/scripts/rt/data/unisim_comp.v:607]
 INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [/home/dGnome/Applications/Vivado_2015p2/Vivado/2015.2/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-256] done synthesizing module 'clock_gen' (4#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/clock_gen.v:62]
-INFO: [Synth 8-638] synthesizing module 'reset_gen' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/reset_gen.v:20]
-INFO: [Synth 8-256] done synthesizing module 'reset_gen' (5#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/reset_gen.v:20]
-INFO: [Synth 8-638] synthesizing module 'status_ind' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/status_ind.v:20]
+INFO: [Synth 8-256] done synthesizing module 'clock_gen' (4#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/clock_gen.v:62]
+INFO: [Synth 8-638] synthesizing module 'reset_gen' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/reset_gen.v:20]
+INFO: [Synth 8-256] done synthesizing module 'reset_gen' (5#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/reset_gen.v:20]
+INFO: [Synth 8-638] synthesizing module 'status_ind' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/status_ind.v:20]
 	Parameter BRIGHTNESS bound to: 3'b100 
-INFO: [Synth 8-256] done synthesizing module 'status_ind' (6#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/status_ind.v:20]
-INFO: [Synth 8-638] synthesizing module 'CORTEXM0DS' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/synth_1/.Xil/Vivado-1700793-dPonderStation/realtime/CORTEXM0DS_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'CORTEXM0DS' (7#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/synth_1/.Xil/Vivado-1700793-dPonderStation/realtime/CORTEXM0DS_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'AHBDCD' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBDCD.v:39]
-INFO: [Synth 8-256] done synthesizing module 'AHBDCD' (8#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBDCD.v:39]
-INFO: [Synth 8-638] synthesizing module 'AHBMUX' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBMUX.v:39]
-INFO: [Synth 8-256] done synthesizing module 'AHBMUX' (9#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBMUX.v:39]
-WARNING: [Synth 8-689] width (1) of port connection 'HRDATA_S4' does not match port width (32) of module 'AHBMUX' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:232]
-INFO: [Synth 8-638] synthesizing module 'AHBrom' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBrom.v:17]
+INFO: [Synth 8-256] done synthesizing module 'status_ind' (6#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/status_ind.v:20]
+INFO: [Synth 8-638] synthesizing module 'CORTEXM0DS' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/synth_1/.Xil/Vivado-690940-dPonderStation/realtime/CORTEXM0DS_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'CORTEXM0DS' (7#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/synth_1/.Xil/Vivado-690940-dPonderStation/realtime/CORTEXM0DS_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'AHBDCD' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBDCD.v:39]
+INFO: [Synth 8-256] done synthesizing module 'AHBDCD' (8#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBDCD.v:39]
+INFO: [Synth 8-638] synthesizing module 'AHBMUX' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBMUX.v:39]
+INFO: [Synth 8-256] done synthesizing module 'AHBMUX' (9#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBMUX.v:39]
+INFO: [Synth 8-638] synthesizing module 'AHBrom' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBrom.v:17]
 	Parameter ADDR_WIDTH bound to: 15 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'uart_RXonly' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/uart_RXonly.v:19]
+INFO: [Synth 8-638] synthesizing module 'uart_RXonly' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/uart_RXonly.v:19]
 	Parameter INCR bound to: 20'b00000000110010010101 
 	Parameter INIT bound to: 2'b00 
 	Parameter IDLE bound to: 2'b01 
 	Parameter RECV bound to: 2'b10 
 	Parameter FINI bound to: 2'b11 
-INFO: [Synth 8-256] done synthesizing module 'uart_RXonly' (10#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/uart_RXonly.v:19]
-INFO: [Synth 8-638] synthesizing module 'ram_loader' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/ram_loader.v:19]
+INFO: [Synth 8-256] done synthesizing module 'uart_RXonly' (10#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/uart_RXonly.v:19]
+INFO: [Synth 8-638] synthesizing module 'ram_loader' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/ram_loader.v:19]
 	Parameter ADDR_WIDTH bound to: 15 - type: integer 
 	Parameter INIT bound to: 2'b00 
 	Parameter IDLE bound to: 2'b01 
@@ -100,54 +95,55 @@ INFO: [Synth 8-638] synthesizing module 'ram_loader' [/home/dGnome/Code/College/
 	Parameter HEX bound to: 2'b01 
 	Parameter QUIT bound to: 2'b10 
 	Parameter OTHER bound to: 2'b11 
-INFO: [Synth 8-226] default block is never used [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/ram_loader.v:76]
-INFO: [Synth 8-256] done synthesizing module 'ram_loader' (11#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/ram_loader.v:19]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_8Kword' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/synth_1/.Xil/Vivado-1700793-dPonderStation/realtime/blk_mem_8Kword_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_8Kword' (12#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/synth_1/.Xil/Vivado-1700793-dPonderStation/realtime/blk_mem_8Kword_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'AHBrom' (13#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBrom.v:17]
-INFO: [Synth 8-638] synthesizing module 'AHBram' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBram.v:17]
+INFO: [Synth 8-226] default block is never used [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/ram_loader.v:76]
+INFO: [Synth 8-256] done synthesizing module 'ram_loader' (11#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/ram_loader.v:19]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_8Kword' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/synth_1/.Xil/Vivado-690940-dPonderStation/realtime/blk_mem_8Kword_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_8Kword' (12#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/synth_1/.Xil/Vivado-690940-dPonderStation/realtime/blk_mem_8Kword_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'AHBrom' (13#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBrom.v:17]
+INFO: [Synth 8-638] synthesizing module 'AHBram' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBram.v:17]
 	Parameter ADDR_WIDTH bound to: 14 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_4Kword' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/synth_1/.Xil/Vivado-1700793-dPonderStation/realtime/blk_mem_4Kword_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_4Kword' (14#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/synth_1/.Xil/Vivado-1700793-dPonderStation/realtime/blk_mem_4Kword_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'AHBram' (15#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBram.v:17]
-INFO: [Synth 8-638] synthesizing module 'AHBgpio' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBgpio.v:20]
-INFO: [Synth 8-256] done synthesizing module 'AHBgpio' (16#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBgpio.v:20]
-WARNING: [Synth 8-689] width (5) of port connection 'gpio_in1' does not match port width (16) of module 'AHBgpio' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:333]
-WARNING: [Synth 8-350] instance 'GPIO' of module 'AHBgpio' requires 15 connections, but only 14 given [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:312]
-INFO: [Synth 8-638] synthesizing module 'AHBuart' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBuart.v:28]
-INFO: [Synth 8-638] synthesizing module 'FIFO' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/fifo.v:43]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_4Kword' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/synth_1/.Xil/Vivado-690940-dPonderStation/realtime/blk_mem_4Kword_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_4Kword' (14#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/DemoSystem.runs/synth_1/.Xil/Vivado-690940-dPonderStation/realtime/blk_mem_4Kword_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'AHBram' (15#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBram.v:17]
+INFO: [Synth 8-638] synthesizing module 'AHBgpio' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBgpio.v:20]
+INFO: [Synth 8-256] done synthesizing module 'AHBgpio' (16#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBgpio.v:20]
+WARNING: [Synth 8-689] width (5) of port connection 'gpio_in1' does not match port width (16) of module 'AHBgpio' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:333]
+WARNING: [Synth 8-350] instance 'GPIO' of module 'AHBgpio' requires 15 connections, but only 14 given [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:312]
+INFO: [Synth 8-638] synthesizing module 'AHBuart' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBuart.v:28]
+INFO: [Synth 8-638] synthesizing module 'FIFO' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/fifo.v:43]
 	Parameter DWIDTH bound to: 8 - type: integer 
 	Parameter AWIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'FIFO' (17#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/fifo.v:43]
-INFO: [Synth 8-638] synthesizing module 'uart' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/uart.v:18]
+INFO: [Synth 8-256] done synthesizing module 'FIFO' (17#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/fifo.v:43]
+INFO: [Synth 8-638] synthesizing module 'uart' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/uart.v:18]
 	Parameter INCR bound to: 20'b00000000110010010101 
 	Parameter INIT bound to: 2'b00 
 	Parameter IDLE bound to: 2'b01 
 	Parameter RECV bound to: 2'b10 
 	Parameter FINI bound to: 2'b11 
-INFO: [Synth 8-256] done synthesizing module 'uart' (18#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/uart.v:18]
-INFO: [Synth 8-256] done synthesizing module 'AHBuart' (19#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBuart.v:28]
-INFO: [Synth 8-638] synthesizing module 'AHBdummy' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBdummy.v:16]
+INFO: [Synth 8-256] done synthesizing module 'uart' (18#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/uart.v:18]
+INFO: [Synth 8-256] done synthesizing module 'AHBuart' (19#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBuart.v:28]
+INFO: [Synth 8-638] synthesizing module 'AHBdummy' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBdummy.v:16]
 	Parameter OKAY bound to: 1'b0 
 	Parameter ERROR bound to: 1'b1 
-INFO: [Synth 8-256] done synthesizing module 'AHBdummy' (20#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBdummy.v:16]
-INFO: [Synth 8-638] synthesizing module 'AHBspi' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBspi.v:159]
+INFO: [Synth 8-256] done synthesizing module 'AHBdummy' (20#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBdummy.v:16]
+INFO: [Synth 8-638] synthesizing module 'AHBdisp' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBdisp.v:32]
+	Parameter D_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'AHBdisp' (21#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBdisp.v:32]
+INFO: [Synth 8-638] synthesizing module 'AHBspi' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBspi.v:183]
+INFO: [Synth 8-638] synthesizing module 'spi' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/spi.v:4]
 	Parameter IDLE bound to: 2'b00 
 	Parameter PREP bound to: 2'b01 
 	Parameter TX bound to: 2'b10 
-INFO: [Synth 8-155] case statement is not full and has no default [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBspi.v:428]
-INFO: [Synth 8-256] done synthesizing module 'AHBspi' (21#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBspi.v:159]
-INFO: [Synth 8-638] synthesizing module 'AHBdisp' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBdisp.v:32]
-	Parameter D_WIDTH bound to: 20 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'AHBdisp' (22#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBdisp.v:32]
-WARNING: [Synth 8-689] width (1) of port connection 'HRDATA' does not match port width (32) of module 'AHBdisp' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:421]
-WARNING: [Synth 8-3848] Net HWDATA_spi in module/entity AHBliteTop does not have driver. [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:85]
-WARNING: [Synth 8-3848] Net CS_spi in module/entity AHBliteTop does not have driver. [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:86]
-WARNING: [Synth 8-3848] Net BEGIN_spi in module/entity AHBliteTop does not have driver. [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:87]
-WARNING: [Synth 8-3848] Net CLKDELAY_spi in module/entity AHBliteTop does not have driver. [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:88]
-INFO: [Synth 8-256] done synthesizing module 'AHBliteTop' (23#1) [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:17]
+	Parameter COMPLETE bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/spi.v:263]
+WARNING: [Synth 8-567] referenced signal 'frameBits' should be on the sensitivity list [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/spi.v:260]
+INFO: [Synth 8-256] done synthesizing module 'spi' (22#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/spi.v:4]
+INFO: [Synth 8-226] default block is never used [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBspi.v:319]
+INFO: [Synth 8-256] done synthesizing module 'AHBspi' (23#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBspi.v:183]
+WARNING: [Synth 8-350] instance 'SPI' of module 'AHBspi' requires 16 connections, but only 15 given [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:421]
+INFO: [Synth 8-256] done synthesizing module 'AHBliteTop' (24#1) [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:17]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 921.527 ; gain = 176.809 ; free physical = 172 ; free virtual = 3584
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 921.523 ; gain = 176.809 ; free physical = 396 ; free virtual = 4359
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -156,23 +152,8 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin SPI:dataTx[7] to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
-WARNING: [Synth 8-3295] tying undriven pin SPI:dataTx[6] to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
-WARNING: [Synth 8-3295] tying undriven pin SPI:dataTx[5] to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
-WARNING: [Synth 8-3295] tying undriven pin SPI:dataTx[4] to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
-WARNING: [Synth 8-3295] tying undriven pin SPI:dataTx[3] to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
-WARNING: [Synth 8-3295] tying undriven pin SPI:dataTx[2] to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
-WARNING: [Synth 8-3295] tying undriven pin SPI:dataTx[1] to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
-WARNING: [Synth 8-3295] tying undriven pin SPI:dataTx[0] to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
-WARNING: [Synth 8-3295] tying undriven pin SPI:cs_sel[1] to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
-WARNING: [Synth 8-3295] tying undriven pin SPI:cs_sel[0] to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
-WARNING: [Synth 8-3295] tying undriven pin SPI:tx_begin to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
-WARNING: [Synth 8-3295] tying undriven pin SPI:clkDelay[3] to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
-WARNING: [Synth 8-3295] tying undriven pin SPI:clkDelay[2] to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
-WARNING: [Synth 8-3295] tying undriven pin SPI:clkDelay[1] to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
-WARNING: [Synth 8-3295] tying undriven pin SPI:clkDelay[0] to constant 0 [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBliteTop.v:388]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 921.527 ; gain = 176.809 ; free physical = 172 ; free virtual = 3583
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 921.523 ; gain = 176.809 ; free physical = 395 ; free virtual = 4359
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -181,36 +162,37 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Constraint/Nexys4_SoC.xdc]
-Finished Parsing XDC File [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Constraint/Nexys4_SoC.xdc]
+Parsing XDC File [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Constraint/Nexys4_SoC.xdc]
+Finished Parsing XDC File [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Constraint/Nexys4_SoC.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Timing 38-2] Deriving generated clocks
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1269.988 ; gain = 0.000 ; free physical = 119 ; free virtual = 3484
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1270.992 ; gain = 0.000 ; free physical = 338 ; free virtual = 4298
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 189 ; free virtual = 3487
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 328 ; free virtual = 4290
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 189 ; free virtual = 3487
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 328 ; free virtual = 4290
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 189 ; free virtual = 3487
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 327 ; free virtual = 4289
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "HSEL_S0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "HSEL_S1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "HSEL_S2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "HSEL_S3" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "HSEL_S4" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "HSEL_S5" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "HSEL_NOMAP" won't be mapped to RAM because it is too sparse
 ROM size is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5544] ROM "nibbleReg_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -240,12 +222,9 @@ INFO: [Synth 8-5544] ROM "array_reg_reg[3]" won't be mapped to Block RAM because
 INFO: [Synth 8-5544] ROM "array_reg_reg[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "array_reg_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "array_reg_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "nextState" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'update_mosi_reg' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBspi.v:432]
-WARNING: [Synth 8-327] inferring latch for variable 'read_miso_reg' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBspi.v:433]
-WARNING: [Synth 8-327] inferring latch for variable 'prep_shiftReg_reg' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBspi.v:431]
+INFO: [Synth 8-5544] ROM "dataRx" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 179 ; free virtual = 3477
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 298 ; free virtual = 4260
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -260,46 +239,46 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     21 Bit       Adders := 2     
 	   2 Input      7 Bit       Adders := 2     
-	   2 Input      4 Bit       Adders := 12    
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 11    
 	   2 Input      3 Bit       Adders := 1     
-	   2 Input      1 Bit       Adders := 1     
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
 	               21 Bit    Registers := 2     
-	               16 Bit    Registers := 4     
+	               16 Bit    Registers := 6     
 	               14 Bit    Registers := 1     
 	                9 Bit    Registers := 2     
 	                8 Bit    Registers := 50    
 	                7 Bit    Registers := 2     
-	                5 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 21    
-	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 9     
-	                1 Bit    Registers := 19    
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 10    
+	                1 Bit    Registers := 20    
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 2     
 	   4 Input     16 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 6     
 	   4 Input      8 Bit        Muxes := 1     
-	   3 Input      8 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
-	   6 Input      4 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
 	   5 Input      4 Bit        Muxes := 1     
 	   8 Input      4 Bit        Muxes := 1     
-	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
 	   6 Input      2 Bit        Muxes := 3     
-	   2 Input      2 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 5     
 	   5 Input      2 Bit        Muxes := 3     
-	   3 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 52    
-	   4 Input      1 Bit        Muxes := 23    
-	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 54    
+	   4 Input      1 Bit        Muxes := 25    
 	  10 Input      1 Bit        Muxes := 10    
+	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -318,10 +297,10 @@ Detailed RTL Component Info :
 Module AHBDCD 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   6 Input      4 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
-	   6 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 6     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
 Module AHBMUX 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -423,26 +402,6 @@ Module AHBdummy
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 2     
-Module AHBspi 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      4 Bit       Adders := 1     
-	   2 Input      1 Bit       Adders := 1     
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   3 Input      8 Bit        Muxes := 1     
-	   5 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   3 Input      2 Bit        Muxes := 1     
-	   3 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 3     
 Module AHBdisp 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -454,6 +413,33 @@ Detailed RTL Component Info :
 	   8 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
 	  10 Input      1 Bit        Muxes := 10    
+Module spi 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 1     
+Module AHBspi 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -466,24 +452,25 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 179 ; free virtual = 3477
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 298 ; free virtual = 4260
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'DISPLAY/rHADDR_reg[3:0]' into 'GPIO/rHADDR_reg[3:0]' [/home/dGnome/Code/College/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBdisp.v:63]
+INFO: [Synth 8-4471] merging register 'DISPLAY/rHADDR_reg[3:0]' into 'GPIO/rHADDR_reg[3:0]' [/home/dGnome/Code/College/Year5/EmbbedDes/EEEN40280-SystemOnChip/Hardware/Design/AHBdisp.v:63]
 INFO: [Synth 8-5546] ROM "decode/HSEL_S0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "decode/HSEL_S1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "decode/HSEL_S2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "decode/HSEL_S3" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "decode/HSEL_S4" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "decode/HSEL_S5" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "decode/HSEL_NOMAP" won't be mapped to RAM because it is too sparse
 ROM size is below threshold of ROM address width. It will be mapped to LUTs
 WARNING: [Synth 8-3917] design AHBliteTop has port rgbLED[4] driven by constant 0
 WARNING: [Synth 8-3917] design AHBliteTop has port rgbLED[1] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 169 ; free virtual = 3467
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 291 ; free virtual = 4253
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 169 ; free virtual = 3467
+Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 291 ; free virtual = 4253
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -506,33 +493,7 @@ ROM:
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\GPIO/in1A_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SPI/currentState_reg[0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\SPI/cs_bar_accel_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SPI/read_miso_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SPI/prep_shiftReg_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SPI/update_mosi_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\GPIO/in1A_reg[15] )
-WARNING: [Synth 8-3332] Sequential element (\SPI/update_mosi_reg ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/read_miso_reg ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/prep_shiftReg_reg ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/countClk_reg[0] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/shiftReg_reg[7] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/shiftReg_reg[6] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/shiftReg_reg[5] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/shiftReg_reg[4] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/shiftReg_reg[3] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/shiftReg_reg[2] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/shiftReg_reg[1] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/shiftReg_reg[0] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/mosi_reg ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/cs_bar_accel_reg ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/countBit_reg[3] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/countBit_reg[2] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/countBit_reg[1] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/countBit_reg[0] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/currentState_reg[1] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/currentState_reg[0] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\SPI/sclk_prevVal_reg ) is unused and will be removed from module AHBliteTop.
 WARNING: [Synth 8-3332] Sequential element (\GPIO/in1A_reg[14] ) is unused and will be removed from module AHBliteTop.
 WARNING: [Synth 8-3332] Sequential element (\GPIO/in1A_reg[13] ) is unused and will be removed from module AHBliteTop.
 WARNING: [Synth 8-3332] Sequential element (\GPIO/in1A_reg[12] ) is unused and will be removed from module AHBliteTop.
@@ -553,30 +514,33 @@ WARNING: [Synth 8-3332] Sequential element (\GPIO/in1B_reg[8] ) is unused and wi
 WARNING: [Synth 8-3332] Sequential element (\GPIO/in1B_reg[7] ) is unused and will be removed from module AHBliteTop.
 WARNING: [Synth 8-3332] Sequential element (\GPIO/in1B_reg[6] ) is unused and will be removed from module AHBliteTop.
 WARNING: [Synth 8-3332] Sequential element (\GPIO/in1B_reg[5] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\UART/rHADDR_reg[0] ) is unused and will be removed from module AHBliteTop.
+WARNING: [Synth 8-3332] Sequential element (\SPI/rHADDR_reg[1] ) is unused and will be removed from module AHBliteTop.
 WARNING: [Synth 8-3332] Sequential element (\RAM/rHADDR_reg[2] ) is unused and will be removed from module AHBliteTop.
-WARNING: [Synth 8-3332] Sequential element (\UART/rHADDR_reg[1] ) is unused and will be removed from module AHBliteTop.
+WARNING: [Synth 8-3332] Sequential element (\SPI/rHADDR_reg[2] ) is unused and will be removed from module AHBliteTop.
 WARNING: [Synth 8-3332] Sequential element (\RAM/rHADDR_reg[3] ) is unused and will be removed from module AHBliteTop.
 WARNING: [Synth 8-3332] Sequential element (\RAM/rHSIZE_reg[0] ) is unused and will be removed from module AHBliteTop.
 WARNING: [Synth 8-3332] Sequential element (\RAM/rHSIZE_reg[1] ) is unused and will be removed from module AHBliteTop.
+WARNING: [Synth 8-3332] Sequential element (\SPI/rHADDR_reg[0] ) is unused and will be removed from module AHBliteTop.
 WARNING: [Synth 8-3332] Sequential element (\RAM/rHADDR_reg[1] ) is unused and will be removed from module AHBliteTop.
 WARNING: [Synth 8-3332] Sequential element (\RAM/rHADDR_reg[0] ) is unused and will be removed from module AHBliteTop.
+WARNING: [Synth 8-3332] Sequential element (\UART/rHADDR_reg[0] ) is unused and will be removed from module AHBliteTop.
+WARNING: [Synth 8-3332] Sequential element (\UART/rHADDR_reg[1] ) is unused and will be removed from module AHBliteTop.
 WARNING: [Synth 8-3332] Sequential element (\GPIO/in1A_reg[15] ) is unused and will be removed from module AHBliteTop.
 WARNING: [Synth 8-3332] Sequential element (\GPIO/in1B_reg[15] ) is unused and will be removed from module AHBliteTop.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 161 ; free virtual = 3462
+Finished Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 267 ; free virtual = 4228
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 161 ; free virtual = 3462
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 267 ; free virtual = 4228
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 161 ; free virtual = 3462
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 267 ; free virtual = 4228
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -584,10 +548,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 160 ; free virtual = 3427
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 268 ; free virtual = 4229
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 160 ; free virtual = 3427
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 267 ; free virtual = 4229
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -599,7 +563,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 130 ; free virtual = 3398
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 246 ; free virtual = 4209
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -617,7 +581,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 130 ; free virtual = 3398
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 246 ; free virtual = 4209
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -630,7 +594,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 130 ; free virtual = 3398
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 246 ; free virtual = 4209
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -642,13 +606,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 130 ; free virtual = 3398
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 246 ; free virtual = 4209
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 130 ; free virtual = 3398
+Start Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 246 ; free virtual = 4209
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 130 ; free virtual = 3398
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 246 ; free virtual = 4209
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -672,18 +636,18 @@ Report Cell Usage:
 |3     |blk_mem_8Kword |     1|
 |4     |BUFG           |     2|
 |5     |CARRY4         |    24|
-|6     |LUT1           |    99|
-|7     |LUT2           |    27|
-|8     |LUT3           |    77|
-|9     |LUT4           |    49|
-|10    |LUT5           |   112|
-|11    |LUT6           |   175|
-|12    |MUXF7          |    41|
-|13    |MUXF8          |    12|
+|6     |LUT1           |   101|
+|7     |LUT2           |    30|
+|8     |LUT3           |    70|
+|9     |LUT4           |    72|
+|10    |LUT5           |   134|
+|11    |LUT6           |   238|
+|12    |MUXF7          |    42|
+|13    |MUXF8          |    16|
 |14    |PLLE2_ADV      |     1|
 |15    |FDCE           |    19|
-|16    |FDRE           |   684|
-|17    |FDSE           |     7|
+|16    |FDRE           |   753|
+|17    |FDSE           |     9|
 |18    |IBUF           |    25|
 |19    |OBUF           |    50|
 +------+---------------+------+
@@ -692,30 +656,31 @@ Report Instance Areas:
 +------+-------------+------------+------+
 |      |Instance     |Module      |Cells |
 +------+-------------+------------+------+
-|1     |top          |            |  1550|
-|2     |  DISPLAY    |AHBdisp     |   178|
-|3     |  DUMMY      |AHBdummy    |     6|
-|4     |  GPIO       |AHBgpio     |   129|
+|1     |top          |            |  1732|
+|2     |  DISPLAY    |AHBdisp     |   206|
+|3     |  DUMMY      |AHBdummy    |     4|
+|4     |  GPIO       |AHBgpio     |   154|
 |5     |  RAM        |AHBram      |   122|
 |6     |  ROM        |AHBrom      |   248|
 |7     |    loader   |ram_loader  |   113|
 |8     |    uart1    |uart_RXonly |   103|
-|9     |  SPI        |AHBspi      |     2|
-|10    |  UART       |AHBuart     |   595|
-|11    |    uFIFO_RX |FIFO        |   231|
-|12    |    uFIFO_TX |FIFO_0      |   233|
-|13    |    uart2    |uart        |   120|
-|14    |  clockGen   |clock_gen   |     5|
-|15    |  mux        |AHBMUX      |    64|
-|16    |  resetGen   |reset_gen   |    10|
-|17    |  statusInd  |status_ind  |    35|
+|9     |  SPI        |AHBspi      |   123|
+|10    |    spi2     |spi         |    93|
+|11    |  UART       |AHBuart     |   597|
+|12    |    uFIFO_RX |FIFO        |   234|
+|13    |    uFIFO_TX |FIFO_0      |   235|
+|14    |    uart2    |uart        |   119|
+|15    |  clockGen   |clock_gen   |     5|
+|16    |  mux        |AHBMUX      |    72|
+|17    |  resetGen   |reset_gen   |    10|
+|18    |  statusInd  |status_ind  |    35|
 +------+-------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 129 ; free virtual = 3398
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 247 ; free virtual = 4209
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 56 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1269.988 ; gain = 54.281 ; free physical = 129 ; free virtual = 3398
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1269.988 ; gain = 525.270 ; free physical = 129 ; free virtual = 3398
+Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1270.992 ; gain = 54.281 ; free physical = 247 ; free virtual = 4209
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1270.992 ; gain = 526.277 ; free physical = 247 ; free virtual = 4209
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 50 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -725,8 +690,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-110 Infos, 82 Warnings, 0 Critical Warnings and 0 Errors encountered.
+109 Infos, 39 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1277.996 ; gain = 424.777 ; free physical = 127 ; free virtual = 3396
-report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1342.012 ; gain = 0.000 ; free physical = 123 ; free virtual = 3392
-INFO: [Common 17-206] Exiting Vivado at Mon May 11 19:07:03 2026...
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1279.000 ; gain = 425.785 ; free physical = 335 ; free virtual = 4295
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1343.016 ; gain = 0.000 ; free physical = 332 ; free virtual = 4293
+INFO: [Common 17-206] Exiting Vivado at Mon May 18 03:58:23 2026...

@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Mon May 11 17:47:53 2026
+| Date         : Mon May 18 03:57:45 2026
 | Host         : dPonderStation running 64-bit Arch Linux
 | Command      : report_utilization -file blk_mem_8Kword_utilization_synth.rpt -pb blk_mem_8Kword_utilization_synth.pb
 | Design       : blk_mem_8Kword
